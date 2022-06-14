@@ -2,8 +2,11 @@ package fa.mockproject.controller;
 
 import fa.mockproject.entity.User;
 import fa.mockproject.model.UserModel;
+import fa.mockproject.service.ClassBatchService;
 import fa.mockproject.service.SecurityService;
 import fa.mockproject.service.UserService;
+import fa.mockproject.service.impl.ClassBatchServiceImpl;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -44,6 +47,13 @@ public class UserController {
             model.addAttribute("message", "You have been logged out successfully.");
         return "login";
     }
+    
+	@PostMapping("/acceptAnApprovedClass")
+	public String acceptAnApproved() {
+		
+		return null;
+
+	}
 
   /*  @GetMapping(path = {"/editEmployee"})
     public String editEmployee(Model model, int employeeId, ModelMap modelMap) {

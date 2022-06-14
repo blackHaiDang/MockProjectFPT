@@ -33,6 +33,8 @@ import fa.mockproject.service.SecurityServiceImpl;
 import fa.mockproject.service.impl.CVServiceImpl;
 import fa.mockproject.service.impl.CandidateServiceImpl;
 import fa.mockproject.service.impl.ChannelServiceImpl;
+import fa.mockproject.service.impl.FacultyServiceImpl;
+import fa.mockproject.service.impl.LocationServiceImpl;
 import fa.mockproject.service.impl.SkillServiceImpl;
 import fa.mockproject.service.impl.TraineeCandidateProfileServiceImpl;
 import fa.mockproject.service.impl.TraineeCandidateProfileStatusServiceImpl;
