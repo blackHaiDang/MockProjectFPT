@@ -71,8 +71,9 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 	@Override
 	public ClassBatchModel getClass(Long classBatchId) {
 		
-		ClassBatchModel classBatchModel = new ClassBatchModel();;
+		ClassBatchModel classBatchModel = new ClassBatchModel();
 		ClassBatch classBatch = null;
+		
 		
 		try {
 			classBatch = classBatchRepository.getOne(classBatchId);			
@@ -124,7 +125,15 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean ApproveClass(Long classBatchId) {
-		// TODO Auto-generated method stub
+//		
+		ClassBatchStatusEnum status = new ClassBatchModel().getStatus();
+		
+		if(status.equals("Planning") ) {
+			classBatchRepository.save(status);
+			
+		}
+		
+
 		return false;
 	}
 

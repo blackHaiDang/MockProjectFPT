@@ -13,6 +13,8 @@ import fa.mockproject.entity.enumtype.BudgetCodeEnum;
 import fa.mockproject.model.ClassAdminModel;
 import fa.mockproject.model.ClassBatchModel;
 import fa.mockproject.model.LocationModel;
+import fa.mockproject.service.ClassBatchService;
+import fa.mockproject.service.impl.ClassBatchServiceImpl;
 
 @Controller
 public class ClassManagementController {
@@ -40,10 +42,12 @@ public class ClassManagementController {
 	}
 	
 	@PostMapping("/addClass")
-	public String creatNewClass(@ModelAttribute("classBatchModel") ClassBatchModel classBatchModel) {
+	public String createNewClass(@ModelAttribute("classBatchModel") ClassBatchModel classBatchModel) {
 		System.out.println(classBatchModel);
 		System.out.println(classBatchModel.getBudgetCode());
 		System.out.println("Hello");
 		return "ClassManagement";
 	}
+	
+
 }
