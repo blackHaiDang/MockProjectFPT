@@ -137,13 +137,13 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean StartClass(Long classBatchId) {
-		// TODO Auto-generated method stub
+		// Start an accepted Class
 		return false;
 	}
 
 	@Override
 	public boolean FinishClass(Long classBatchId) {
-		// TODO Auto-generated method stub
+		// Finish an in-progress Class
 		return false;
 	}
 
@@ -167,7 +167,7 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean CloseClass(Long classBatchId) {
-		// TODO Auto-generated method stub
+		// Close a finished Class
 		return false;
 	}
 
@@ -179,7 +179,7 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean DeclineClass(Long classBatchId) {
-		// TODO Auto-generated method stub
+		// Decline an approved Class
 		return false;
 	}
 
