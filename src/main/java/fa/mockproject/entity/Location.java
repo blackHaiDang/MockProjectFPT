@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import fa.mockproject.model.LocationModel;
+
 @Entity
 @Table(name = "Location")
 @Cacheable
@@ -28,10 +30,10 @@ public class Location {
 	private String remarks;
 
 	@OneToMany(mappedBy = "location")
-	private Set<ClassBatch> classBatch;
+	private Set<ClassBatch> classBatchs;
 
 	@OneToMany(mappedBy = "location")
-	private Set<TraineeCandidateProfile> traineeCandidateProfile;
+	private Set<Candidate> candidates;
 
 	public Location() {
 		super();
@@ -48,6 +50,14 @@ public class Location {
 		this.locationId = location.getLocationId();
 		this.locationName = location.getLocationName();
 		this.remarks = location.getRemarks();
+	}
+
+	public Location(LocationModel locationModel) {
+		super();
+		this.locationId = locationModel.getLocationId();
+		this.locationName = locationModel.getLocationName();
+		this.remarks = locationModel.getRemarks();
+
 	}
 
 	public String getLocationId() {
@@ -74,20 +84,22 @@ public class Location {
 		this.remarks = remarks;
 	}
 
-	public Set<ClassBatch> getClassBatch() {
-		return classBatch;
+	
+
+	public Set<ClassBatch> getClassBatchs() {
+		return classBatchs;
 	}
 
-	public void setClassBatch(Set<ClassBatch> classBatch) {
-		this.classBatch = classBatch;
+	public void setClassBatchs(Set<ClassBatch> classBatchs) {
+		this.classBatchs = classBatchs;
 	}
 
-	public Set<TraineeCandidateProfile> getTraineeCandidateProfile() {
-		return traineeCandidateProfile;
+	public Set<Candidate> getCandidates() {
+		return candidates;
 	}
 
-	public void setTraineeCandidateProfile(Set<TraineeCandidateProfile> traineeCandidateProfile) {
-		this.traineeCandidateProfile = traineeCandidateProfile;
+	public void setCandidates(Set<Candidate> candidates) {
+		this.candidates = candidates;
 	}
 
 	@Override
