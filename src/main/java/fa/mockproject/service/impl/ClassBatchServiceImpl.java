@@ -9,6 +9,7 @@ import java.util.Map;
 import javax.persistence.EntityNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import fa.mockproject.entity.ClassBatch;
 import fa.mockproject.entity.enumtype.ClassBatchStatusEnum;
@@ -17,6 +18,7 @@ import fa.mockproject.repository.ClassBatchRepository;
 import fa.mockproject.service.ClassBatchService;
 import fa.mockproject.util.ClassManagementConstant;
 
+@Service
 public class ClassBatchServiceImpl implements ClassBatchService {
 	
 	@Autowired
@@ -71,32 +73,60 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 	@Override
 	public ClassBatchModel getClass(Long classBatchId) {
 		
+<<<<<<< HEAD
 		ClassBatchModel classBatchModel = new ClassBatchModel();
+=======
+		ClassBatchModel classBatchModel = null;
+>>>>>>> main
 		ClassBatch classBatch = null;
 		
 		
 		try {
-			classBatch = classBatchRepository.getOne(classBatchId);			
+			
+			classBatch = classBatchRepository.getOne(classBatchId);
+			classBatchModel = new ClassBatchModel(classBatch);
+			
 		} catch (EntityNotFoundException e) {
 			e.printStackTrace();
-			return classBatchModel;
 		}
 		
-		classBatchModel.setGeneralInfor(classBatch);
-
 		return classBatchModel;
 	}
 
 	@Override
 	public ClassBatchModel addClass(ClassBatchModel classBatchModel) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		classBatchModel.setStatus(ClassBatchStatusEnum.Draft);
+		ClassBatch classBatch = new ClassBatch(classBatchModel);
+		
+		try {
+			classBatchRepository.save(classBatch);			
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+		return classBatchModel;
 	}
 
 	@Override
-	public ClassBatchModel updateClass(ClassBatchModel classBatchModel) {
-		// TODO Auto-generated method stub
-		return null;
+	public ClassBatchModel updateDraftClass(ClassBatchModel classBatchModel) {
+		ClassBatch classBatch = new ClassBatch(classBatchModel);
+		
+		try {
+			classBatchRepository.save(classBatch);			
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+		return classBatchModel;
+	}
+	
+	@Override
+	public ClassBatchModel updateInprogressClass(ClassBatchModel classBatchModel) {
+		return classBatchModel;
+		//...
 	}
 
 	@Override
