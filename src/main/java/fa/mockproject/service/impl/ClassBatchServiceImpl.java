@@ -1,14 +1,17 @@
 package fa.mockproject.service.impl;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Map;
 
 import javax.persistence.EntityNotFoundException;
+import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
 import fa.mockproject.entity.ClassBatch;
@@ -167,14 +170,29 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 	}
 
 	@Override
-	public boolean AcceptClass(Long classBatchId) {
-		// TODO Auto-generated method stub
-		return false;
+	public ClassBatchModel AcceptClass(ClassBatchModel classBatchModel) {
+		ClassBatchStatusEnum planning = ClassBatchStatusEnum.Planning;
+		ClassBatchStatusEnum planned = ClassBatchStatusEnum.Planned;
+		LocalDateTime now = LocalDateTime.now();
+		String history = now + "- Approved by" ;
+		String popup = "Are you sure to accept?";
+		String msg28 = " Accept successfully. ";
+		SimpleMailMessage message = new SimpleMailMessage();
+		
+		
+		if(planning != null) {	
+			classBatchRepository.save(planned);
+			JOptionPane.showMessageDialog(null, popup);
+		}
+		return classBatchModel;
 	}
 
 	@Override
 	public boolean DeclineClass(Long classBatchId) {
-		// TODO Auto-generated method stub
+		ClassBatchStatusEnum status = ClassBatchStatusEnum.Planning;
+		if(status != null) {
+			classBatchRepository.delete(null);
+		}
 		return false;
 	}
 
