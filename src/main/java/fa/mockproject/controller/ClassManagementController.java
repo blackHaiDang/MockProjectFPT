@@ -1,25 +1,18 @@
 package fa.mockproject.controller;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-import fa.mockproject.entity.enumtype.BudgetCodeEnum;
-import fa.mockproject.model.ClassAdminModel;
 import fa.mockproject.model.ClassBatchModel;
-import fa.mockproject.model.LocationModel;
-import fa.mockproject.service.ClassBatchService;
-import fa.mockproject.service.impl.ClassBatchServiceImpl;
 
 @Controller
 public class ClassManagementController {
 	
-	@GetMapping("/")
+	@GetMapping(value = "/ClassManagement")
 	public String getClassList(Model model) {
 //		ClassBatchModel classBatchModel = new ClassBatchModel();
 //		classBatchModel.setLocationModel(new LocationModel());
@@ -41,7 +34,7 @@ public class ClassManagementController {
 		return "ClassManagement";
 	}
 	
-	@PostMapping("/addClass")
+	@RequestMapping(value = "/addClass", method = { RequestMethod.GET, RequestMethod.POST })
 	public String createNewClass(@ModelAttribute("classBatchModel") ClassBatchModel classBatchModel) {
 		System.out.println(classBatchModel);
 		System.out.println(classBatchModel.getBudgetCode());
