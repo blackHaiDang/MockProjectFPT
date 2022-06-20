@@ -73,13 +73,8 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 	@Override
 	public ClassBatchModel getClass(Long classBatchId) {
 		
-<<<<<<< HEAD
-		ClassBatchModel classBatchModel = new ClassBatchModel();
-=======
 		ClassBatchModel classBatchModel = null;
->>>>>>> main
 		ClassBatch classBatch = null;
-		
 		
 		try {
 			
@@ -137,13 +132,13 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean StartClass(Long classBatchId) {
-		// Start an accepted Class
+		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean FinishClass(Long classBatchId) {
-		// Finish an in-progress Class
+		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -155,15 +150,7 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean ApproveClass(Long classBatchId) {
-//		
-		ClassBatchStatusEnum status = new ClassBatchModel().getStatus();
-		
-		if(status.equals("Planning") ) {
-			classBatchRepository.save(status);
-			
-		}
-		
-
+		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -175,7 +162,7 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean CloseClass(Long classBatchId) {
-		// Close a finished Class
+		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -187,7 +174,7 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean DeclineClass(Long classBatchId) {
-		// Decline an approved Class
+		// TODO Auto-generated method stub
 		return false;
 	}
 
