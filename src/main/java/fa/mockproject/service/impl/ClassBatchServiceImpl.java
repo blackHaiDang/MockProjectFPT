@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import fa.mockproject.entity.ClassBatch;
@@ -174,7 +176,8 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 		ClassBatchStatusEnum planning = ClassBatchStatusEnum.Planning;
 		ClassBatchStatusEnum planned = ClassBatchStatusEnum.Planned;
 		LocalDateTime now = LocalDateTime.now();
-		String history = now + "- Approved by" ;
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String history = now + "- Approved by" + auth.getPrincipal();
 		String popup = "Are you sure to accept?";
 		String msg28 = " Accept successfully. ";
 		SimpleMailMessage message = new SimpleMailMessage();
