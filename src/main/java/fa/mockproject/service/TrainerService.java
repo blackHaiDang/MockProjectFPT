@@ -6,7 +6,9 @@ import fa.mockproject.entity.Trainer;
 import fa.mockproject.model.TrainerModel;
 
 public interface TrainerService {
+	
 	List<Trainer> getAllTrainers();
+	
 	void save(TrainerModel trainerModel);
 
 	Trainer findByTrainerId(long trainerId);
