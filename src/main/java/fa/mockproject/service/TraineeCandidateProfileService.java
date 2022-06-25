@@ -2,12 +2,16 @@ package fa.mockproject.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import fa.mockproject.entity.TraineeCandidateProfile;
 import fa.mockproject.model.TraineeCandidateProfileModel;
 
+@Service
 public interface TraineeCandidateProfileService {
 	
 	public List<TraineeCandidateProfile> listAll();
+	
 
 	public void save(TraineeCandidateProfile profile);
 
