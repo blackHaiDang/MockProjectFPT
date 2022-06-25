@@ -4,13 +4,17 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
+import fa.mockproject.entity.Trainee;
 import fa.mockproject.entity.enumtype.BudgetCodeEnum;
 import fa.mockproject.model.AuditModel;
 import fa.mockproject.model.BudgetModel;
@@ -22,12 +26,21 @@ import fa.mockproject.model.LocationModel;
 import fa.mockproject.model.ScopeModel;
 import fa.mockproject.model.SubSubjectTypeModel;
 import fa.mockproject.model.SubjectTypeModel;
+import fa.mockproject.model.TraineeModel;
 import fa.mockproject.model.TrainerModel;
+import fa.mockproject.repository.TraineeRepository;
+import fa.mockproject.service.TraineeCandidateProfileService;
+import fa.mockproject.service.TraineeService;
+
+
 
 @Controller
 public class ClassManagementController {
 	
-	@GetMapping("/")
+	@Autowired
+	private TraineeCandidateProfileService traineecandidateservice;
+	
+	@GetMapping("/classManagement")
 	public String getClassList(Model model) {
 		List<LocationModel> locationModels = new ArrayList<LocationModel>();
 		locationModels.add(new LocationModel("CG", "Cau Giay", ""));
@@ -114,6 +127,17 @@ public class ClassManagementController {
 		
 		return "ClassManagement";
 	}
+	@Autowired
+	TraineeService service;
+	@RequestMapping("/_trainee")
+	public ModelAndView trainee() {
+        var mav = new ModelAndView();
+    
+        mav.setViewName("Trainee.html");
+
+        mav.addObject("hello", "Hello World");
+        return mav;
+    }  
 	
 	@PostMapping("/addClass")
 	@ResponseBody
