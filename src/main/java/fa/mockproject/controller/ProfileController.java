@@ -72,7 +72,8 @@ public class ProfileController {
 
 	@Autowired
 	private TraineeCandidateProfileStatusServiceImpl traineeCandidateProfileStatusService;
-
+	
+	
 	@RequestMapping("/createCandidate")
 	public String createCandidate(Model model) {
 		model.addAttribute("traineeCandidateForm", new TraineeCandidateProfileModel());

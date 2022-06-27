@@ -65,8 +65,19 @@
                                 <div class="section-content">
                                 
     <table class="table table-striped table-bordered">
- 			<h1 th:text= ${hello}>
- 			
+ 			<thead>
+        <tr>
+            <th> Full name </th>
+           
+        </tr>
+        <tbody>
+		
+        <tr th:each="abc : ${obj}">
+              </span></td>
+            <td><span th:text="${abc.fullName}"> Full name </span></td>
+        </tr>
+    </tbody>
+    </thead>
 	</table>
 	
 	
