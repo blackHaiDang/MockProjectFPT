@@ -31,6 +31,7 @@ import fa.mockproject.model.TrainerModel;
 import fa.mockproject.repository.TraineeRepository;
 import fa.mockproject.service.TraineeCandidateProfileService;
 import fa.mockproject.service.TraineeService;
+import fa.mockproject.service.impl.TraineeCandidateProfileServiceImpl;
 
 
 
@@ -128,14 +129,15 @@ public class ClassManagementController {
 		return "ClassManagement";
 	}
 	@Autowired
-	TraineeService service;
+	TraineeCandidateProfileServiceImpl service;
 	@RequestMapping("/_trainee")
 	public ModelAndView trainee() {
         var mav = new ModelAndView();
-    
+        var trainee = new TraineeModel(1, "DangNH39", "Nguyen Hai Dang", "good", "good", "male", "FPT", "xyz", "123", "abc@gmail.com", true, "abc", "past", "123", "oneyear");
         mav.setViewName("Trainee.html");
 
-        mav.addObject("hello", "Hello World");
+ //       mav.addObject("hello", "Hello World");
+        mav.addObject("obj", trainee);
         return mav;
     }  
 	
