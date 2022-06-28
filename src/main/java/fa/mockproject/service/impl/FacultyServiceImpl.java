@@ -1,12 +1,6 @@
 package fa.mockproject.service.impl;
 
-<<<<<<< HEAD
 
-
-
-
-=======
->>>>>>> main
 import java.util.List;
 import java.util.Optional;
 
@@ -41,8 +35,5 @@ public class FacultyServiceImpl {
 	public void deleteById(String facultyId) {
 		repo.deleteById(facultyId);
 	}
-<<<<<<< HEAD
 
-=======
->>>>>>> main
 }

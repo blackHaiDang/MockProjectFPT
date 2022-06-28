@@ -11,12 +11,11 @@ import javax.persistence.EntityNotFoundException;
 import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
+
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-=======
->>>>>>> main
+
 import org.springframework.stereotype.Service;
 
 import fa.mockproject.entity.ClassBatch;
