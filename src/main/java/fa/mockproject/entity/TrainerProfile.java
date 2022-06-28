@@ -25,6 +25,7 @@ public class TrainerProfile {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "trainer_profile_id")
 	private long trainerProfileId;
+<<<<<<< HEAD
 	
 	@OneToMany(mappedBy = "trainerProfile", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
 	private List<Trainer> trainers;
@@ -32,6 +33,12 @@ public class TrainerProfile {
 	@Column(name = "account", length = 255, nullable = false)
 	private String account;
 	
+=======
+
+	@OneToMany(mappedBy = "trainerProfile", fetch = FetchType.LAZY)
+	private List<Trainer> trainers;
+
+>>>>>>> main
 	@Column(name = "full_name", length = 255, nullable = false)
 	private String fullName;
 
@@ -56,6 +63,12 @@ public class TrainerProfile {
 	@Column(name = "experience", nullable = false)
 	private int experience;
 
+<<<<<<< HEAD
+=======
+	@Column(name = "account", nullable = false)
+	private String account;
+
+>>>>>>> main
 	@Column(name = "remarks", length = 255, nullable = false)
 	private String remarks;
 
@@ -63,6 +76,7 @@ public class TrainerProfile {
 		super();
 	}
 
+<<<<<<< HEAD
 	public TrainerProfile(long trainerProfileId, List<Trainer> trainers, String account, String fullName,
 			LocalDate dateOfBirth, int gender, String unit, String major, String phone, String email, int experience,
 			String remarks) {
@@ -70,6 +84,13 @@ public class TrainerProfile {
 		this.trainerProfileId = trainerProfileId;
 		this.trainers = trainers;
 		this.account = account;
+=======
+	public TrainerProfile(long trainerProfileId, String fullName, LocalDate dateOfBirth,
+			int gender, String unit, String major, String phone, String email, int experience, String account,
+			String remarks) {
+		super();
+		this.trainerProfileId = trainerProfileId;
+>>>>>>> main
 		this.fullName = fullName;
 		this.dateOfBirth = dateOfBirth;
 		this.gender = gender;
@@ -200,4 +221,8 @@ public class TrainerProfile {
 				+ ", email=" + email + ", experience=" + experience + ", remarks=" + remarks + "]";
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
