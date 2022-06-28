@@ -44,4 +44,8 @@ public class TrainerServiceImpl implements TrainerService{
 		return trainer;
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main

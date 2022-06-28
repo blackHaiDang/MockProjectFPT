@@ -3,15 +3,24 @@ package fa.mockproject.model;
 import java.time.LocalDate;
 
 import fa.mockproject.entity.Trainer;
+<<<<<<< HEAD
 import fa.mockproject.entity.TrainerProfile;
 import fa.mockproject.entity.enumtype.TrainerTypeEnum;
+=======
+import fa.mockproject.entity.enumtype.TrainerType;
+>>>>>>> main
 
 public class TrainerModel {
 
 	private long trainerId;
+<<<<<<< HEAD
 	private long trainerProfileId;
 	private TrainerTypeEnum type;
 	private String account;
+=======
+	private TrainerType trainerType;
+	private long trainerProfileId;
+>>>>>>> main
 	private String fullName;
 	private LocalDate dateOfBirth;
 	private int gender;
@@ -20,13 +29,18 @@ public class TrainerModel {
 	private String phone;
 	private String email;
 	private int experience;
+<<<<<<< HEAD
 
+=======
+	private String account;
+>>>>>>> main
 	private String remarks;
 
 	public TrainerModel() {
 		super();
 	}
 
+<<<<<<< HEAD
 	public TrainerModel(long trainerId, long trainerProfileId, TrainerTypeEnum type, String account, String fullName,
 			LocalDate dateOfBirth, int gender, String unit, String major, String phone, String email, int experience,
 			String remarks) {
@@ -35,6 +49,15 @@ public class TrainerModel {
 		this.trainerProfileId = trainerProfileId;
 		this.type = type;
 		this.account = account;
+=======
+	public TrainerModel(long trainerId, TrainerType trainerType, long trainerProfileId, String fullName,
+			LocalDate dateOfBirth, int gender, String unit, String major, String phone, String email, int experience,
+			String account, String remarks) {
+		super();
+		this.trainerId = trainerId;
+		this.trainerType = trainerType;
+		this.trainerProfileId = trainerProfileId;
+>>>>>>> main
 		this.fullName = fullName;
 		this.dateOfBirth = dateOfBirth;
 		this.gender = gender;
@@ -43,8 +66,10 @@ public class TrainerModel {
 		this.phone = phone;
 		this.email = email;
 		this.experience = experience;
+		this.account = account;
 		this.remarks = remarks;
 	}
+<<<<<<< HEAD
 	
 	public TrainerModel(TrainerProfile trainerProfile) {
 		super();
@@ -60,14 +85,21 @@ public class TrainerModel {
 		this.experience = trainerProfile.getExperience();
 		this.remarks = trainerProfile.getRemarks();
 	}
+=======
+>>>>>>> main
 
 	public TrainerModel(Trainer trainer) {
 		super();
 		this.trainerId = trainer.getTrainerId();
+<<<<<<< HEAD
 		this.type = trainer.getType();
 		this.remarks = trainer.getRemarks();
 		this.trainerProfileId = trainer.getTrainerProfile().getTrainerProfileId();
 		this.account = trainer.getTrainerProfile().getAccount();
+=======
+		this.trainerType = trainer.getTrainerType();
+		this.trainerProfileId = trainer.getTrainerProfile().getTrainerProfileId();
+>>>>>>> main
 		this.fullName = trainer.getTrainerProfile().getFullName();
 		this.dateOfBirth = trainer.getTrainerProfile().getDateOfBirth();
 		this.gender = trainer.getTrainerProfile().getGender();
@@ -76,7 +108,12 @@ public class TrainerModel {
 		this.phone = trainer.getTrainerProfile().getPhone();
 		this.email = trainer.getTrainerProfile().getEmail();
 		this.experience = trainer.getTrainerProfile().getExperience();
+<<<<<<< HEAD
 		this.remarks = trainer.getTrainerProfile().getRemarks();
+=======
+		this.account = trainer.getTrainerProfile().getAccount();
+		this.remarks = trainer.getRemarks();
+>>>>>>> main
 	}
 
 	public long getTrainerId() {
@@ -87,6 +124,7 @@ public class TrainerModel {
 		this.trainerId = trainerId;
 	}
 
+<<<<<<< HEAD
 	public long getTrainerProfileId() {
 		return trainerProfileId;
 	}
@@ -101,6 +139,22 @@ public class TrainerModel {
 
 	public void setType(TrainerTypeEnum type) {
 		this.type = type;
+=======
+	public TrainerType getTrainerType() {
+		return trainerType;
+	}
+
+	public void setTrainerType(TrainerType trainerType) {
+		this.trainerType = trainerType;
+	}
+
+	public long getTrainerProfileId() {
+		return trainerProfileId;
+	}
+
+	public void setTrainerProfileId(long trainerProfileId) {
+		this.trainerProfileId = trainerProfileId;
+>>>>>>> main
 	}
 
 	public String getAccount() {
@@ -175,6 +229,14 @@ public class TrainerModel {
 		this.experience = experience;
 	}
 
+	public String getAccount() {
+		return account;
+	}
+
+	public void setAccount(String account) {
+		this.account = account;
+	}
+
 	public String getRemarks() {
 		return remarks;
 	}
@@ -185,12 +247,23 @@ public class TrainerModel {
 
 	@Override
 	public String toString() {
+<<<<<<< HEAD
 		return "TrainerModel [trainerId=" + trainerId + ", trainerProfileId=" + trainerProfileId + ", type=" + type
 				+ ", account=" + account + ", fullName=" + fullName + ", dateOfBirth=" + dateOfBirth + ", gender="
 				+ gender + ", unit=" + unit + ", major=" + major + ", phone=" + phone + ", email=" + email
 				+ ", experience=" + experience + ", remarks=" + remarks + "]";
+=======
+		return "TrainerModel [trainerId=" + trainerId + ", trainerType=" + trainerType + ", trainerProfileId="
+				+ trainerProfileId + ", fullName=" + fullName + ", dateOfBirth=" + dateOfBirth + ", gender=" + gender
+				+ ", unit=" + unit + ", major=" + major + ", phone=" + phone + ", email=" + email + ", experience="
+				+ experience + ", account=" + account + ", remarks=" + remarks + "]";
+>>>>>>> main
 	}
 
 
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> main
