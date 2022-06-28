@@ -43,7 +43,7 @@ public class ClassManagementController {
 	
 	@GetMapping("/classManagement")
 	public String getClassList(Model model) {
-<<<<<<< HEAD
+
 		List<LocationModel> locationModels = new ArrayList<LocationModel>();
 		locationModels.add(new LocationModel("CG", "Cau Giay", ""));
 		locationModels.add(new LocationModel("HL", "Hoa Lac", ""));
@@ -126,7 +126,7 @@ public class ClassManagementController {
 		model.addAttribute("scopeModels", scopeModels);
 		model.addAttribute("trainerModels", trainerModels);
 		model.addAttribute("classBatchModel", classBatchModel);
-=======
+
 //		ClassBatchModel classBatchModel = new ClassBatchModel();
 //		classBatchModel.setLocationModel(new LocationModel());
 //		classBatchModel.setBudgetCode(BudgetCodeEnum.CTC_Fresher_Allowance);
@@ -143,7 +143,7 @@ public class ClassManagementController {
 //		model.addAttribute("budgetCodeEnums", budgetCodeEnums);
 //		model.addAttribute("locationModels", locationModels);
 //		model.addAttribute("locationTest", locationModels.get(0));
->>>>>>> main
+
 		
 		return "ClassManagement";
 	}

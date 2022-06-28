@@ -7,7 +7,6 @@ import javax.persistence.Cacheable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,12 +19,11 @@ import fa.mockproject.model.TrainerModel;
 @Table(name = "TrainerProfile")
 @Cacheable
 public class TrainerProfile {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "trainer_profile_id")
 	private long trainerProfileId;
-<<<<<<< HEAD
 	
 	@OneToMany(mappedBy = "trainerProfile", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
 	private List<Trainer> trainers;
@@ -33,50 +31,37 @@ public class TrainerProfile {
 	@Column(name = "account", length = 255, nullable = false)
 	private String account;
 	
-=======
-
-	@OneToMany(mappedBy = "trainerProfile", fetch = FetchType.LAZY)
-	private List<Trainer> trainers;
-
->>>>>>> main
 	@Column(name = "full_name", length = 255, nullable = false)
 	private String fullName;
-
+	
 	@Column(name = "date_of_birth", nullable = false)
 	private LocalDate dateOfBirth;
-
+	
 	@Column(name = "gender", nullable = false)
 	private int gender;
-
+	
 	@Column(name = "unit", length = 255, nullable = false)
 	private String unit;
-
-	@Column(name = "major", length = 255, nullable = false)
+	
+	@Column(name= "major", length = 255, nullable = false)
 	private String major;
-
+	
 	@Column(name = "phone", length = 255, nullable = false)
 	private String phone;
-
-	@Column(name = "email", length = 255, nullable = false)
+	
+	@Column(name= "email", length = 255, nullable = false)
 	private String email;
 
 	@Column(name = "experience", nullable = false)
 	private int experience;
-
-<<<<<<< HEAD
-=======
-	@Column(name = "account", nullable = false)
-	private String account;
-
->>>>>>> main
-	@Column(name = "remarks", length = 255, nullable = false)
+	
+	@Column(name= "remarks", length = 255, nullable = false)
 	private String remarks;
 
 	public TrainerProfile() {
 		super();
 	}
 
-<<<<<<< HEAD
 	public TrainerProfile(long trainerProfileId, List<Trainer> trainers, String account, String fullName,
 			LocalDate dateOfBirth, int gender, String unit, String major, String phone, String email, int experience,
 			String remarks) {
@@ -84,13 +69,6 @@ public class TrainerProfile {
 		this.trainerProfileId = trainerProfileId;
 		this.trainers = trainers;
 		this.account = account;
-=======
-	public TrainerProfile(long trainerProfileId, String fullName, LocalDate dateOfBirth,
-			int gender, String unit, String major, String phone, String email, int experience, String account,
-			String remarks) {
-		super();
-		this.trainerProfileId = trainerProfileId;
->>>>>>> main
 		this.fullName = fullName;
 		this.dateOfBirth = dateOfBirth;
 		this.gender = gender;
@@ -99,7 +77,6 @@ public class TrainerProfile {
 		this.phone = phone;
 		this.email = email;
 		this.experience = experience;
-		this.account = account;
 		this.remarks = remarks;
 	}
 
@@ -213,16 +190,5 @@ public class TrainerProfile {
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
-
-	@Override
-	public String toString() {
-		return "TrainerProfile [trainerProfileId=" + trainerProfileId + ", fullName=" + fullName + ", dateOfBirth="
-				+ dateOfBirth + ", gender=" + gender + ", unit=" + unit + ", major=" + major + ", phone=" + phone
-				+ ", email=" + email + ", experience=" + experience + ", remarks=" + remarks + "]";
-	}
-
-<<<<<<< HEAD
+	
 }
-=======
-}
->>>>>>> main
