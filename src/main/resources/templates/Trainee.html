@@ -10,6 +10,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Trainee</title>
+<link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
 </head>
 <body>
     <div class="app">
@@ -63,27 +64,28 @@
                                 <div class="section-header">
                                 </div>
                                 <div class="section-content">
+     
+     
                                 
-    <table class="table table-striped table-bordered">
- 			<thead>
-        <tr>
-            <th> Full name </th>
-           
-        </tr>
-        <tbody>
-		
-        <tr th:each="abc : ${obj}">
-              </span></td>
-            <td><span th:text="${abc.fullName}"> Full name </span></td>
-        </tr>
-    </tbody>
-    </thead>
-	</table>
-	
-	
-	
-	
-	
+	<div class="container">
+		<div class="row">
+        <div class="col-lg-10 mt-5 mb-5">
+            <table id="example" class="table table-bordered" style="width: 100%">
+                <thead>
+                <tr>
+                    <th> Empl ID</th>
+                    <th> Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="abc : ${obj}">
+                <td th:text="${abc.traineeCandidateProfileId}"></td>
+                <td th:text="${abc.fullName}"></td>
+                </tr>
+                </tbody>
+            </table>
+            
+
 	
 	
                              <div th:if="${totalPages >= 1}">

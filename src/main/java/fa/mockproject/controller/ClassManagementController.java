@@ -1,7 +1,9 @@
 package fa.mockproject.controller;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import fa.mockproject.entity.Trainee;
+import fa.mockproject.entity.TraineeCandidateProfile;
 import fa.mockproject.entity.enumtype.BudgetCodeEnum;
 import fa.mockproject.model.AuditModel;
 import fa.mockproject.model.BudgetModel;
@@ -26,6 +29,7 @@ import fa.mockproject.model.LocationModel;
 import fa.mockproject.model.ScopeModel;
 import fa.mockproject.model.SubSubjectTypeModel;
 import fa.mockproject.model.SubjectTypeModel;
+import fa.mockproject.model.TraineeCandidateProfileModel;
 import fa.mockproject.model.TraineeModel;
 import fa.mockproject.model.TrainerModel;
 import fa.mockproject.repository.TraineeRepository;
@@ -152,7 +156,12 @@ public class ClassManagementController {
 	@RequestMapping("/_trainee")
 	public ModelAndView trainee() {
         var mav = new ModelAndView();
-        var trainee = new TraineeModel(1, "DangNH39", "Nguyen Hai Dang", "good", "good", "male", "FPT", "xyz", "123", "abc@gmail.com", true, "abc", "past", "123", "oneyear");
+ //    var trainee = new TraineeCandidateProfile(1, "DangNH39", "Nguyen Hai Dang", "good", "good", "male", "FPT", "xyz", "123", "abc@gmail.com", true, "abc", "past", "123", "oneyear");
+        
+        Date date = new Date();
+        
+        TraineeCandidateProfileModel trainee = new TraineeCandidateProfileModel(12345678, null, null, "Nguyễn Hải Đăng", null, date, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, null, null);
+
         mav.setViewName("Trainee.html");
 
  //       mav.addObject("hello", "Hello World");
