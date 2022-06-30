@@ -1,7 +1,10 @@
 package fa.mockproject.controller;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.text.SimpleDateFormat;
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 import java.time.LocalDate;
@@ -16,9 +19,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+=======
+import org.springframework.web.bind.annotation.ResponseBody;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 import org.springframework.web.bind.annotation.ResponseBody;
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -37,6 +44,7 @@ import fa.mockproject.model.ScopeModel;
 import fa.mockproject.model.SubSubjectTypeModel;
 import fa.mockproject.model.SubjectTypeModel;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fa.mockproject.model.TraineeCandidateProfileModel;
 import fa.mockproject.model.TraineeModel;
 import fa.mockproject.model.TrainerModel;
@@ -46,6 +54,9 @@ import fa.mockproject.service.TraineeService;
 import fa.mockproject.service.impl.TraineeCandidateProfileServiceImpl;
 
 
+=======
+import fa.mockproject.model.TrainerModel;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 import fa.mockproject.model.TrainerModel;
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -59,7 +70,10 @@ public class ClassManagementController {
 	@GetMapping("/classManagement")
 	public String getClassList(Model model) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		List<LocationModel> locationModels = new ArrayList<LocationModel>();
@@ -145,6 +159,7 @@ public class ClassManagementController {
 		model.addAttribute("trainerModels", trainerModels);
 		model.addAttribute("classBatchModel", classBatchModel);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //		ClassBatchModel classBatchModel = new ClassBatchModel();
 //		classBatchModel.setLocationModel(new LocationModel());
@@ -163,6 +178,8 @@ public class ClassManagementController {
 //		model.addAttribute("locationModels", locationModels);
 //		model.addAttribute("locationTest", locationModels.get(0));
 
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		

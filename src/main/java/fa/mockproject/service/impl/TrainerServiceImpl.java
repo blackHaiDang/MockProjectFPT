@@ -3,7 +3,10 @@ package fa.mockproject.service.impl;
 import java.util.List;
 import java.util.Optional;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +31,7 @@ public class TrainerServiceImpl implements TrainerService{
 	@Override
 	public void save(TrainerModel trainerModel) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 //		Trainer trainer = new Trainer(trainerModel);
 //		trainerRepository.save(trainer);
 	}
@@ -36,6 +40,8 @@ public class TrainerServiceImpl implements TrainerService{
 		// TODO Auto-generated method stub
 		return null;
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		TrainerProfile trainerProfile = new TrainerProfile(trainerModel);
 		Trainer trainer = new Trainer(trainerModel);
 		trainerRepository.save(trainerProfile);
@@ -51,6 +57,15 @@ public class TrainerServiceImpl implements TrainerService{
 			throw new RuntimeException("Trainer not found for id"+trainerId);
 		}
 		return trainer;
+<<<<<<< HEAD
+=======
+	}
+
+	@Override
+	public void deleteTrainerProfileById(long id) {
+		this.trainerRepository.deleteById(id);
+		
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	}
 
 	@Override

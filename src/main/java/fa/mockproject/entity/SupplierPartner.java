@@ -61,7 +61,11 @@ public class SupplierPartner {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public int getSupplierPartnerId() {
+=======
+	public long getSupplierPartnerId() {
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 	public long getSupplierPartnerId() {
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

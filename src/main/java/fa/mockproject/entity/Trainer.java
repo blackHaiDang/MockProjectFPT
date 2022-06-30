@@ -61,8 +61,11 @@ public class Trainer {
 		this.remarks = trainerModel.getRemarks();
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	public Trainer(TrainerModel trainerModel) {
 		super();
 		this.trainerId = trainerModel.getTrainerId();
@@ -70,6 +73,9 @@ public class Trainer {
 		this.trainerProfile = new TrainerProfile(trainerModel);
 		this.remarks = trainerModel.getRemarks();
 	}
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	public long getTrainerId() {
 		return trainerId;
@@ -112,6 +118,7 @@ public class Trainer {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@Override
 	public String toString() {
 		return "Trainer [trainerId=" + trainerId + ", type=" + type + ", trainerProfile=" + trainerProfile
@@ -122,6 +129,8 @@ public class Trainer {
 		trainerId = trainerModel.getTrainerId();
 		type = trainerModel.getType();
 	}
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 }
 =======
 }

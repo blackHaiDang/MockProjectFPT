@@ -14,6 +14,7 @@ public class Allowance {
 
     @ManyToOne
 <<<<<<< HEAD
+<<<<<<< HEAD
     @JoinColumn(name = "trainee_candidate id", nullable = false)
     private Trainee trainee;
 
@@ -22,6 +23,16 @@ public class Allowance {
     private AllowanceGroup allowanceGroup;
 
     @Column(name = "allowance_result")
+=======
+    @JoinColumn(name = "trainee_candidate_id", nullable = false)
+    private Trainee trainee;
+
+    @OneToOne
+    @JoinColumn(name = "group_id", nullable = false)
+    private AllowanceGroup allowanceGroup;
+
+    @Column(name = "allowance_result", nullable = false)
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
     @JoinColumn(name = "trainee_candidate_id", nullable = false)
     private Trainee trainee;
@@ -43,8 +54,13 @@ public class Allowance {
     public Allowance() {
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     public Allowance(long group, Trainee traineeId, AllowanceGroup allowanceGroup, int allowanceResult, Integer remarks) {
+=======
+    
+    public Allowance(long group, Trainee traineeId, AllowanceGroup allowanceGroup, int allowanceResult, String remarks) {
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
     
     public Allowance(long group, Trainee traineeId, AllowanceGroup allowanceGroup, int allowanceResult, String remarks) {

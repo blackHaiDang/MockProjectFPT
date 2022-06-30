@@ -47,10 +47,13 @@ public class Candidate {
 	@JoinColumn(name = "location_id", nullable = true)
 	private Location location;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "entry_test_id", nullable = true)
 	private Set<EntryTest> entryTest;
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
@@ -65,9 +68,12 @@ public class Candidate {
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "offer_id", nullable = true)
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private Set<Offer> offer;
 	
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	private List<Offer> offers;
 
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -117,6 +123,7 @@ public class Candidate {
 	public Location getLocation() {
 		return location;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}
 
 	public void setLocation(Location location) {
@@ -125,6 +132,8 @@ public class Candidate {
 
 	public Set<EntryTest> getEntryTest() {
 		return entryTest;
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	}
@@ -174,24 +183,33 @@ public class Candidate {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public Candidate(TraineeCandidateProfileModel model, Channel channel2, Location location2, TraineeCandidateProfile profile2,TraineeCandidateProfileStatus status2) {
 		Date dateApplicationDate = model.getApplicationDate();
 		LocalDate localDateApplicationDate = dateApplicationDate.toInstant().atZone(ZoneId.systemDefault())
 				.toLocalDate();
 		this.applicationDate = localDateApplicationDate;
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	public Candidate(TraineeCandidateProfileModel model, Channel channel2, Location location2,
 		 TraineeCandidateProfileStatus status2) {
 		LocalDate localDateApplicationDate = model.getApplicationDate();
 		this.applicationDate = localDateApplicationDate.atStartOfDay();
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		this.channel = channel2;
 		this.location = location2;
 		this.status = status2;
 		this.remarks = model.getRemarks();
 <<<<<<< HEAD
+<<<<<<< HEAD
 		this.traineeCandidateProfile= profile2;
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	}
 
 	public Candidate(Candidate findbyId) {
@@ -227,6 +245,9 @@ public class Candidate {
 		this.offers = candidateID2.getOffers();
 		this.status = status2;
 		this.remarks = candidateID2.getRemarks();
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	}
 

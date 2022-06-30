@@ -3,7 +3,11 @@ package fa.mockproject.controller;
 import java.util.List;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javax.servlet.http.HttpSession;
+=======
+import javax.servlet.http.HttpServletRequest;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 import javax.servlet.http.HttpServletRequest;
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -16,8 +20,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+=======
+import org.springframework.web.bind.annotation.PathVariable;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 import org.springframework.web.bind.annotation.PathVariable;
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -45,6 +53,9 @@ public class TraineeController {
 		model.addAttribute("trainee", traineeModel);
 //		session.setAttribute("traineeModel", traineeModel);
 		
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		return "traineeInfo";
 	}
@@ -58,6 +69,7 @@ public class TraineeController {
 		return "updateTrainee";
 	}
 	
+<<<<<<< HEAD
 	@PostMapping(value = "/updateTrainee")
 	public String updateTrainee(@ModelAttribute("traineeModel") TraineeModel traineeModelForm, Model model
 			, HttpSession session) {
@@ -70,6 +82,8 @@ public class TraineeController {
 		return "redirect:/showTraineeList";
 	}
 	
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	@GetMapping(value = "/showTraineeList/{pageNo}")
 	public String showTraineeList(Model model, HttpServletRequest rs,
 								HttpServletRequest request,

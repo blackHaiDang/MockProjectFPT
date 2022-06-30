@@ -13,12 +13,15 @@ import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+<<<<<<< HEAD
 
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import org.springframework.stereotype.Service;
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 import fa.mockproject.entity.ClassBatch;
 import fa.mockproject.entity.enumtype.ClassBatchStatusEnum;
@@ -102,17 +105,23 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 		
 		classBatchModel.setStatus(ClassBatchStatusEnum.Draft);
 <<<<<<< HEAD
+<<<<<<< HEAD
 		ClassBatch classBatch = new ClassBatch(classBatchModel);
 		
 		try {
 			classBatchRepository.save(classBatch);			
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		ClassBatch classBatch;
 		try {
 			classBatch = new ClassBatch(classBatchModel);
 			classBatchRepository.save(classBatch);			
 		} catch (IOException e1) {
 			e1.printStackTrace();
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
@@ -125,24 +134,34 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 	@Override
 	public ClassBatchModel updateDraftClass(ClassBatchModel classBatchModel) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		ClassBatch classBatch = new ClassBatch(classBatchModel);
 		
 		try {
 			classBatchRepository.save(classBatch);			
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		ClassBatch classBatch;
 		try {
 			classBatch = new ClassBatch(classBatchModel);
 			classBatchRepository.save(classBatch);			
 		} catch (IOException e1) {
 			e1.printStackTrace();
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 			return null;
 		}
 <<<<<<< HEAD
+<<<<<<< HEAD
 		
+=======
+			
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 			
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -219,10 +238,14 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 	@Override
 	public boolean DeclineClass(Long classBatchId) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		ClassBatchStatusEnum status = ClassBatchStatusEnum.Planning;
 		if(status != null) {
 			classBatchRepository.delete(null);
 		}
+=======
+		// Decline an approved Class
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 		// Decline an approved Class
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

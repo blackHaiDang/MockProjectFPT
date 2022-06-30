@@ -5,7 +5,11 @@ import fa.mockproject.entity.SupplierPartner;
 public class SupplierPartnerModel {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private int supplierPartnerId;
+=======
+	private long supplierPartnerId;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 	private long supplierPartnerId;
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -16,7 +20,11 @@ public class SupplierPartnerModel {
 		super();
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public SupplierPartnerModel(int supplierPartnerId, String supplierPartnerName, String remarks) {
+=======
+	public SupplierPartnerModel(long supplierPartnerId, String supplierPartnerName, String remarks) {
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 	public SupplierPartnerModel(long supplierPartnerId, String supplierPartnerName, String remarks) {
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -33,15 +41,21 @@ public class SupplierPartnerModel {
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public int getSupplierPartnerId() {
 		return supplierPartnerId;
 	}
 	public void setSupplierPartnerId(int supplierPartnerId) {
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	public long getSupplierPartnerId() {
 		return supplierPartnerId;
 	}
 	public void setSupplierPartnerId(long supplierPartnerId) {
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		this.supplierPartnerId = supplierPartnerId;
 	}

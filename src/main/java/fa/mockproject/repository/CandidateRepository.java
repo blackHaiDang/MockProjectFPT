@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.stereotype.Repository;
 =======
 import org.springframework.data.jpa.repository.Query;
@@ -18,6 +19,14 @@ public interface CandidateRepository extends JpaRepository<Candidate, Long>{
 
 	void save(TraineeCandidateProfile profile);
 =======
+public interface CandidateRepository extends JpaRepository<Candidate, Long> {
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import fa.mockproject.entity.Candidate;
+
 public interface CandidateRepository extends JpaRepository<Candidate, Long> {
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 

@@ -1,7 +1,11 @@
 package fa.mockproject.entity;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.Set;
+=======
+import java.util.List;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 import java.util.List;
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -33,7 +37,11 @@ public class Faculty {
 
 	@OneToMany(mappedBy = "faculty")
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private Set<TraineeCandidateProfile> traineeCandidateProfile;
+=======
+	private List<TraineeCandidateProfile> traineeCandidateProfile;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 	private List<TraineeCandidateProfile> traineeCandidateProfile;
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -44,7 +52,11 @@ public class Faculty {
 
 	public Faculty(String facultyId, String facultyName, String remarks,
 <<<<<<< HEAD
+<<<<<<< HEAD
 			Set<TraineeCandidateProfile> traineeCandidateProfile) {
+=======
+			List<TraineeCandidateProfile> traineeCandidateProfile) {
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 			List<TraineeCandidateProfile> traineeCandidateProfile) {
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -86,6 +98,7 @@ public class Faculty {
 	}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public Set<TraineeCandidateProfile> getTraineeCandidateProfile() {
 		return traineeCandidateProfile;
 	}
@@ -99,6 +112,12 @@ public class Faculty {
 		return traineeCandidateProfile;
 	}
 
+=======
+	public List<TraineeCandidateProfile> getTraineeCandidateProfile() {
+		return traineeCandidateProfile;
+	}
+
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	public void setTraineeCandidateProfile(List<TraineeCandidateProfile> traineeCandidateProfile) {
 		this.traineeCandidateProfile = traineeCandidateProfile;
 	}
@@ -108,5 +127,8 @@ public class Faculty {
 		return facultyName;
 	}
 
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 }

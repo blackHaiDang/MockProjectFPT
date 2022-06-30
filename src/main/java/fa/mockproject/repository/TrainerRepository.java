@@ -8,7 +8,11 @@ import fa.mockproject.entity.TrainerProfile;
 
 @Repository
 <<<<<<< HEAD
+<<<<<<< HEAD
 public interface TrainerRepository extends JpaRepository<Trainer,Long>{
+=======
+public interface TrainerRepository extends JpaRepository<TrainerProfile,Long>{
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 public interface TrainerRepository extends JpaRepository<TrainerProfile,Long>{
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

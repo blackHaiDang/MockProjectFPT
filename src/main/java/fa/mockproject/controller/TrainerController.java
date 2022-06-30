@@ -4,9 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.web.bind.annotation.GetMapping;
 
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,6 +18,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import fa.mockproject.entity.TrainerProfile;
 import fa.mockproject.model.TrainerModel;
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 import fa.mockproject.service.TrainerService;
 
@@ -23,6 +29,7 @@ public class TrainerController {
 	@Autowired
 	private TrainerService trainerService;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	@GetMapping("/showTrainerList")
 	public String showTrainerList(Model model) {
@@ -30,6 +37,8 @@ public class TrainerController {
 		return "trainerList";
 	}
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 	@GetMapping("/showTrainerList")
 	public String showTrainerList(Model model) {
@@ -67,5 +76,8 @@ public class TrainerController {
 //	     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 //	     binder.registerCustomEditor(Date.class,new CustomDateEditor(dateFormat, false));   
 //	}
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 }
