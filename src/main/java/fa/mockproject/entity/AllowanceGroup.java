@@ -14,7 +14,11 @@ public class AllowanceGroup {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     @OneToOne(mappedBy = "allowanceGroup", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+=======
+    @OneToOne(mappedBy = "allowanceGroup",cascade = CascadeType.ALL)
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
     @OneToOne(mappedBy = "allowanceGroup",cascade = CascadeType.ALL)
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

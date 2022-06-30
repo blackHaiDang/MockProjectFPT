@@ -18,7 +18,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import javax.persistence.Lob;
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
@@ -84,7 +87,10 @@ public class ClassBatch {
 	@ManyToOne
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	@JoinColumn(name = "subject_type_id", nullable = false)
@@ -92,6 +98,9 @@ public class ClassBatch {
 	
 	@ManyToOne
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -139,10 +148,13 @@ public class ClassBatch {
 	
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@ManyToOne
 	@JoinColumn(name = "subject_type_id", nullable = false)
 	private SubjectType subjectType;
 	
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
@@ -211,7 +223,11 @@ public class ClassBatch {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public ClassBatch(ClassBatchModel classBatchModel) {
+=======
+	public ClassBatch(ClassBatchModel classBatchModel) throws IOException {
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 	public ClassBatch(ClassBatchModel classBatchModel) throws IOException {
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -246,6 +262,10 @@ public class ClassBatch {
         this.trainers = new ArrayList<Trainer>();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        this.trainers.add(new Trainer(classBatchModel.getMasterTrainerModel(), this));
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
         this.trainers.add(new Trainer(classBatchModel.getMasterTrainerModel(), this));
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -258,7 +278,11 @@ public class ClassBatch {
         this.milestones = classBatchModel.getMilestones();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         this.curriculum = classBatchModel.getCurriculum();
+=======
+        this.curriculumn = new Curriculumn(classBatchModel.getCurriculumnModel(), this);
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
         this.curriculumn = new Curriculumn(classBatchModel.getCurriculumnModel(), this);
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

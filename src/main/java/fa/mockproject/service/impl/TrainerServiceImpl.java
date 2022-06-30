@@ -4,7 +4,10 @@ import java.util.List;
 import java.util.Optional;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
@@ -32,6 +35,7 @@ public class TrainerServiceImpl implements TrainerService{
 	public void save(TrainerModel trainerModel) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //		Trainer trainer = new Trainer(trainerModel);
 //		trainerRepository.save(trainer);
 	}
@@ -40,6 +44,8 @@ public class TrainerServiceImpl implements TrainerService{
 		// TODO Auto-generated method stub
 		return null;
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		TrainerProfile trainerProfile = new TrainerProfile(trainerModel);
@@ -58,7 +64,16 @@ public class TrainerServiceImpl implements TrainerService{
 		}
 		return trainer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+	}
+
+	@Override
+	public void deleteTrainerProfileById(long id) {
+		this.trainerRepository.deleteById(id);
+		
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	}
 
 	@Override

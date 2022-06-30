@@ -27,6 +27,7 @@
 		</dependency>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		
 		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
 <dependency>
@@ -40,10 +41,13 @@
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -59,6 +63,8 @@
 <!-- 		</dependency> -->
 
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		<!-- <dependency> -->
@@ -105,6 +111,7 @@
 		</dependency>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <!-- 		<dependency> -->
 <!-- 			<groupId>org.springframework.security</groupId> -->
@@ -126,12 +133,17 @@
 =======
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		<!-- <dependency> -->
 		<!-- <groupId>org.springframework.security</groupId> -->
 		<!-- <artifactId>spring-security-test</artifactId> -->
 		<!-- <scope>test</scope> -->
 		<!-- </dependency> -->
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -151,6 +163,9 @@
 			<scope>provided</scope>
 		</dependency>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

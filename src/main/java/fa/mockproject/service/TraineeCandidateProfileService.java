@@ -4,9 +4,16 @@ import java.util.List;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.stereotype.Service;
 =======
 import org.springframework.data.repository.query.Param;
+=======
+import org.springframework.data.repository.query.Param;
+
+import fa.mockproject.entity.Candidate;
+import fa.mockproject.entity.TraineeCandidateProfile;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 import fa.mockproject.entity.Candidate;
 import fa.mockproject.entity.TraineeCandidateProfile;

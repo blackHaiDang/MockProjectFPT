@@ -3,6 +3,7 @@ package fa.mockproject.repository;
 import java.util.List;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -10,6 +11,10 @@ import org.springframework.stereotype.Repository;
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 import org.springframework.data.jpa.repository.JpaRepository;
+=======
+
+import org.springframework.data.jpa.repository.JpaRepository;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -24,10 +29,13 @@ import fa.mockproject.entity.TraineeCandidateProfile;
 @Repository
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 public interface TraineeCandidateProfileRepository extends JpaRepository<TraineeCandidateProfile, Long>{
 	
 	
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 public interface TraineeCandidateProfileRepository extends JpaRepository<TraineeCandidateProfile, Long> {
@@ -42,6 +50,9 @@ public interface TraineeCandidateProfileRepository extends JpaRepository<Trainee
 
 	public TraineeCandidateProfile findByCandidate(Candidate candidateId);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

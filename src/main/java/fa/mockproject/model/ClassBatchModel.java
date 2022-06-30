@@ -28,6 +28,7 @@ public class ClassBatchModel {
 	private Integer plannedTraineeNumber;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private BudgetCodeEnum budgetCode;
 	private List<BudgetModel> budgetModels;
 	private Long estimatedBudget;
@@ -36,6 +37,9 @@ public class ClassBatchModel {
 	private FormatTypeModel formatTypeModel;
 	private ScopeModel scopeModel;
 	private SupplierPartnerModel supplierPartnerModel;
+=======
+	private Long estimatedBudget;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 	private Long estimatedBudget;
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -77,6 +81,7 @@ public class ClassBatchModel {
 	public ClassBatchModel(long classId, String className, String classCode, LocalDate expectedStartDate,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			LocalDate expectedEndDate, LocationModel locationModel, String detailLocation,
 			ClassAdminModel classAdminModel, Integer plannedTraineeNumber, BudgetCodeEnum budgetCode,
 			List<BudgetModel> budgetModels, Long estimatedBudget, SubSubjectTypeModel subSubjectTypeModel,
@@ -89,6 +94,8 @@ public class ClassBatchModel {
 =======
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 			LocalDate expectedEndDate, Integer plannedTraineeNumber, Long estimatedBudget, LocalDate actualStartDate,
 			LocalDate actualEndDate, Integer acceptedTraineeNumber, Integer actualTraineeNumber, Integer milestones,
 			String weightedNumber, String history, String detailLocation, BudgetCodeEnum budgetCode,
@@ -99,6 +106,9 @@ public class ClassBatchModel {
 			TrainerModel masterTrainerModel, List<TrainerModel> trainerModels, List<AuditModel> auditModels,
 			List<TraineeModel> traineeModels, String remarks) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -111,6 +121,7 @@ public class ClassBatchModel {
 		this.plannedTraineeNumber = plannedTraineeNumber;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		this.budgetCode = budgetCode;
 		this.budgetModels = budgetModels;
 		this.estimatedBudget = estimatedBudget;
@@ -119,6 +130,9 @@ public class ClassBatchModel {
 		this.formatTypeModel = formatTypeModel;
 		this.scopeModel = scopeModel;
 		this.supplierPartnerModel = supplierPartnerModel;
+=======
+		this.estimatedBudget = estimatedBudget;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 		this.estimatedBudget = estimatedBudget;
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -154,7 +168,10 @@ public class ClassBatchModel {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
@@ -189,8 +206,11 @@ public class ClassBatchModel {
 		classBatch.getTrainers().forEach(trainer -> {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 			this.trainerModels.add(new TrainerModel(trainer));
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 			if (trainer.getType() == TrainerTypeEnum.MasterTrainer) {
@@ -200,6 +220,9 @@ public class ClassBatchModel {
 				this.trainerModels.add(new TrainerModel(trainer));				
 			}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -498,6 +521,7 @@ public class ClassBatchModel {
 	public String toString() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		return "ClassBatchModel [classId=" + classId + ", className=" + className + ", classCode=" + classCode
 				+ ", expectedStartDate=" + expectedStartDate + ", expectedEndDate=" + expectedEndDate
 				+ ", locationModel=" + locationModel + ", detailLocation=" + detailLocation + ", classAdminModel="
@@ -512,6 +536,8 @@ public class ClassBatchModel {
 				+ ", subjectTypeModel=" + subjectTypeModel + ", weightedNumber=" + weightedNumber + ", history="
 				+ history + ", status=" + status + ", remarks=" + remarks + "]";
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		return "ClassBatchModel"
@@ -548,6 +574,9 @@ public class ClassBatchModel {
 				+ "traineeModels: " + traineeModels + "\n"
 				+ "remarks: " + remarks + "\n";
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

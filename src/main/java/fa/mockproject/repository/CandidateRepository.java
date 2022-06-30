@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.stereotype.Repository;
 =======
 import org.springframework.data.jpa.repository.Query;
@@ -30,6 +31,15 @@ import fa.mockproject.entity.Candidate;
 public interface CandidateRepository extends JpaRepository<Candidate, Long> {
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
+=======
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import fa.mockproject.entity.Candidate;
+
+public interface CandidateRepository extends JpaRepository<Candidate, Long> {
+
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	@Query(value = "SELECT c from Candidate c where c.candidateId LIKE '%' || :word || '%' "
 			+ "OR c.applicationDate LIKE '%' || :word || '%' " + "OR c.status LIKE '%' || :word || '%' "
 			+ "OR c.channel LIKE '%' || :word || '%' " + "OR c.location LIKE '%' || :word || '%' "

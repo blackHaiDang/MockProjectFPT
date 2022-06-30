@@ -2,7 +2,10 @@ package fa.mockproject.service.impl;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
@@ -13,6 +16,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import org.springframework.data.repository.query.Param;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 import org.springframework.data.repository.query.Param;
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -25,10 +32,13 @@ import fa.mockproject.entity.Faculty;
 import fa.mockproject.repository.FacultyRepository;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 @Service
 public class FacultyServiceImpl {
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 import fa.mockproject.service.FacultyService;
@@ -36,6 +46,9 @@ import fa.mockproject.service.FacultyService;
 @Service
 public class FacultyServiceImpl implements FacultyService{
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -65,6 +78,12 @@ public class FacultyServiceImpl implements FacultyService{
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	public List<Faculty> search(@Param("word") String word) {
+		return (List<Faculty>) repo.search(word);
+	}
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 	public List<Faculty> search(@Param("word") String word) {
 		return (List<Faculty>) repo.search(word);

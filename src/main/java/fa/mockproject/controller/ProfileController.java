@@ -43,10 +43,20 @@ import fa.mockproject.model.InterviewTestResultModel;
 import fa.mockproject.model.TraineeCandidateProfileModel;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fa.mockproject.service.impl.CVServiceImpl;
 import fa.mockproject.service.impl.CandidateServiceImpl;
 import fa.mockproject.service.impl.ChannelServiceImpl;
 import fa.mockproject.service.impl.FacultyServiceImpl;
+=======
+import fa.mockproject.service.impl.AccountServiceImpl;
+import fa.mockproject.service.impl.CVServiceImpl;
+import fa.mockproject.service.impl.CandidateServiceImpl;
+import fa.mockproject.service.impl.ChannelServiceImpl;
+import fa.mockproject.service.impl.EntryTestServiceImpl;
+import fa.mockproject.service.impl.FacultyServiceImpl;
+import fa.mockproject.service.impl.InterviewServiceImpl;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 import fa.mockproject.service.impl.AccountServiceImpl;
 import fa.mockproject.service.impl.CVServiceImpl;
@@ -99,7 +109,10 @@ public class ProfileController {
 	@Autowired
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	private EntryTestServiceImpl entryTestServiceImpl;
@@ -107,7 +120,13 @@ public class ProfileController {
 	@Autowired
 	private InterviewServiceImpl interviewServiceImpl;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+	@Autowired
+	private AccountServiceImpl accountServiceImpl;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 	@Autowired
 	private AccountServiceImpl accountServiceImpl;
@@ -127,10 +146,13 @@ public class ProfileController {
 	private TraineeCandidateProfileStatusServiceImpl traineeCandidateProfileStatusService;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	
 	@RequestMapping("/createCandidate")
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
@@ -180,6 +202,9 @@ public class ProfileController {
 
 	@RequestMapping("/createNewCandidate")
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -388,10 +413,13 @@ public class ProfileController {
 		CV cv = new CV(model);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		TraineeCandidateProfile profile = new TraineeCandidateProfile(model, university, faculty, skill, cv,
 				type);
 		Candidate candidate = new Candidate(model, channel,location, profile, status);
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		Candidate candidate = new Candidate(model, channel, location, status);
@@ -402,6 +430,9 @@ public class ProfileController {
 		status.setCandidate(candidates);
 		traineeCandidateProfileStatusService.save(status);
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

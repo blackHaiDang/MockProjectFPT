@@ -48,10 +48,13 @@ public class Candidate {
 	private Location location;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "entry_test_id", nullable = true)
 	private Set<EntryTest> entryTest;
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
@@ -69,9 +72,12 @@ public class Candidate {
 	@JoinColumn(name = "offer_id", nullable = true)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	private Set<Offer> offer;
 	
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	private List<Offer> offers;
@@ -124,6 +130,7 @@ public class Candidate {
 		return location;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}
 
 	public void setLocation(Location location) {
@@ -132,6 +139,8 @@ public class Candidate {
 
 	public Set<EntryTest> getEntryTest() {
 		return entryTest;
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
@@ -184,6 +193,7 @@ public class Candidate {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public Candidate(TraineeCandidateProfileModel model, Channel channel2, Location location2, TraineeCandidateProfile profile2,TraineeCandidateProfileStatus status2) {
 		Date dateApplicationDate = model.getApplicationDate();
 		LocalDate localDateApplicationDate = dateApplicationDate.toInstant().atZone(ZoneId.systemDefault())
@@ -192,11 +202,16 @@ public class Candidate {
 =======
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	public Candidate(TraineeCandidateProfileModel model, Channel channel2, Location location2,
 		 TraineeCandidateProfileStatus status2) {
 		LocalDate localDateApplicationDate = model.getApplicationDate();
 		this.applicationDate = localDateApplicationDate.atStartOfDay();
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
@@ -206,8 +221,11 @@ public class Candidate {
 		this.remarks = model.getRemarks();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		this.traineeCandidateProfile= profile2;
 =======
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	}
@@ -246,6 +264,9 @@ public class Candidate {
 		this.status = status2;
 		this.remarks = candidateID2.getRemarks();
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 =======
 >>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
