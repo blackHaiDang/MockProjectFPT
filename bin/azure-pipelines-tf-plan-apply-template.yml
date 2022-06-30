@@ -1,0 +1,20 @@
+parameters:
+  environment: environment
+
+stages:
+- stage: plan_${{ parameters.environment }}
+  displayName: plan ${{ parameters.environment }}
+  variables:
+    - name: tfPlanArtifactName
+      value: tf-plan-${{ parameters.environment }}
+    - group: tf-sp-group-${{ parameters.environment }}
+    - group: tf-state-group-${{ parameters.environment }}
+    - group: tf-deployment-group-${{ parameters.environment }}
+  jobs:
+  - job: 'plan'
+    displayName: 'plan'
+    steps:
+    - checkout: none
+    - download: current
+      artifact: $(tfFilesArtifactName)
+
