@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Management</title>
     <script src="https://kit.fontawesome.com/eb5105679e.js" crossorigin="anonymous"></script>
+<<<<<<< HEAD
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" href="../static/css/main.css">
+=======
     <link rel="stylesheet" th:href="@{/main.css}">
+>>>>>>> main
 </head>
 <body>
     <div class="app">
@@ -14,7 +19,11 @@
             <span class="header-title">FSOFT HR UTILITY</span>
         </header>
         <div class="app-content">
+<<<<<<< HEAD
+            <nav class="nav-bar">
+=======
             <nav>
+>>>>>>> main
                 <button class="collapse-btn">&lt&lt</button>
                 <p class="role-option-lable">Your role now is:</p>
                 <select value="" class="role-option">
@@ -46,13 +55,21 @@
                     Create Class          
                 </div>
                 <div class="content">
+<<<<<<< HEAD
+                    <form class="classbatch-infor-form" th:action="@{/addClass}" th:object="${classBatchModel}" method="post">
+=======
                     <form th:action="@{/addClass}" th:object="${classBatchModel}" method="post">
+>>>>>>> main
                         <ul class="nav-tab">
                             <li class="nav-item">
                                 <a href="#" class="nav-link">Information</a>
                             </li>
                             <li class="nav-item">
+<<<<<<< HEAD
+                                <a th:href="@{_trainee}" class="nav-link">Trainee</a>
+=======
                                 <a href="#" class="nav-link">Trainee</a>
+>>>>>>> main
                             </li>
                         </ul>
                         <div class="content-main">
@@ -108,9 +125,15 @@
                                         <tr>
                                             <th>Location</th>
                                             <td>
+<<<<<<< HEAD
+                                                <select th:field="*{locationModel.locationId}" name="" id="">
+                                                	<option value=""></option>                                    
+                                                    <option th:each="location : ${locationModels}" th:value="${location.locationId}" th:text="${location.locationName}"></option>
+=======
                                                 <select th:field="*{locationModel.locationName}" name="" id="">
                                                 	<option value=""></option>                                    
                                                     <option th:each="location : ${locationModels}" th:value="${location.locationName}" th:text="${location.locationName}"></option>
+>>>>>>> main
                                                 </select>
                                             </td>
                                             <th>Detailed Location</th>
@@ -123,7 +146,11 @@
                                             <td>
                                                 <select th:field="*{budgetCode}" name="" id="">
                                                 	<option value=""></option> 
+<<<<<<< HEAD
+                                                    <option th:each="budget: ${budgetCodeEnums}" th:value="${budget}" th:text="${budget}"></option>
+=======
                                                     <option th:each="bud: ${budgetCodeEnums}" th:value="${bud}" th:text="${bud}"></option>
+>>>>>>> main
                                                 </select>
                                             </td>
                                             <th>Estimated Budget</th>
@@ -134,9 +161,15 @@
                                         <tr>
                                             <th>Class Admin</th>
                                             <td>
+<<<<<<< HEAD
+                                                <select th:field="*{classAdminModel.classAdminId}" name="" id="">
+                                                	<option value="0"></option> 
+                                                    <option th:each="classAdmin: ${classAdminModels}" th:value="${classAdmin.classAdminId}" th:text="${classAdmin.account}"></option>
+=======
                                                 <select th:field="*{classAdminModel.account}" name="" id="">
                                                 	<option value=""></option> 
                                                     <option th:each="classAdmin: ${classAdmins}" th:value="${classAdmin.account}" th:text="${classAdmin.account}"></option>
+>>>>>>> main
                                                 </select>
                                             </td>
                                             <th>Weighted Number</th>
@@ -165,39 +198,74 @@
                                         <tr>
                                             <th>Subject Type</th>
                                             <td class="col-5">
+<<<<<<< HEAD
+                                                <select th:field="*{subjectTypeModel.subjectTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="subjectType: ${subjectTypeModels}" th:value="${subjectType.subjectTypeId}" th:text="${subjectType.subjectTypeName}"></option>
+=======
                                                 <select value="">
                                                     <option name="" id=""></option>
+>>>>>>> main
                                                 </select>
                                             </td>
                                             <th>Sub-Subject Type</th>
                                             <td class="col-5">
+<<<<<<< HEAD
+                                                <select th:field="*{subSubjectTypeModel.subSubjectTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="subSubjectType: ${subSubjectTypeModels}" th:value="${subSubjectType.subSubjectTypeId}" th:text="${subSubjectType.subSubjectTypeName}"></option>
+=======
                                                 <select value="">
                                                     <option name="" id=""></option>
+>>>>>>> main
                                                 </select>
                                             </td>
                                             <th>Delivery Type</th>
                                             <td class="col-5">
+<<<<<<< HEAD
+                                                <select th:field="*{deliveryTypeModel.deliveryTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="deliveryType: ${deliveryTypeModels}" th:value="${deliveryType.deliveryTypeId}" th:text="${deliveryType.deliveryTypeName}"></option>
+=======
                                                 <select value="">
                                                     <option name="" id=""></option>
+>>>>>>> main
                                                 </select>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Format Type</th>
                                             <td>
+<<<<<<< HEAD
+                                                <select th:field="*{formatTypeModel.formatTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="formatType: ${formatTypeModels}" th:value="${formatType.formatTypeId}" th:text="${formatType.formatTypeName}"></option>
+=======
                                                 <select value="">
                                                     <option name="" id=""></option>
+>>>>>>> main
                                                 </select>
                                             </td>
                                             <th>Scope</th>
                                             <td>
+<<<<<<< HEAD
+                                                <select th:field="*{scopeModel.scopeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="scope: ${scopeModels}" th:value="${scope.scopeId}" th:text="${scope.scopeName}"></option>
+=======
                                                 <select value="">
                                                     <option name="" id=""></option>
+>>>>>>> main
                                                 </select>
                                             </td>
                                             <th>Supplier / Partner</th>
                                             <td>
+<<<<<<< HEAD
+                                            	<input type="text" hidden="true" th:field="*{supplierPartnerModel.supplierPartnerId}">
+                                                <input type="text" th:field="*{supplierPartnerModel.supplierPartnerName}">
+=======
                                                 <input type="text" name="" id="">
+>>>>>>> main
                                             </td>
                                         </tr>
                                     </table>
@@ -205,18 +273,32 @@
                                         <tr>
                                             <th class="col-4">Actual Start Date</th>
                                             <td class="col-4">
+<<<<<<< HEAD
+                                                <input type="date" th:field="*{actualStartDate}">
+                                            </td>
+                                            <th class="col-4">Actual End Date</th>
+                                            <td class="col-4">
+                                                <input type="date" th:field="*{actualEndDate}">
+=======
                                                 <input type="date" name="" id="">
                                             </td>
                                             <th class="col-4">Actual End Date</th>
                                             <td class="col-4">
                                                 <input type="date" name="" id="">
+>>>>>>> main
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Master Trainer</th>
                                             <td>
+<<<<<<< HEAD
+                                                <select>
+                                                	<option value="0"></option>
+                                                    <option th:each="trainer: ${trainerModels}" th:value="${trainer.trainerId}" th:text="${trainer.account}"></option>
+=======
                                                 <select value="">
                                                     <option name="" id=""></option>
+>>>>>>> main
                                                 </select>
                                             </td>
                                             <th>Trainer</th>
@@ -229,11 +311,19 @@
                                         <tr>
                                             <th>Curriculumn</th>
                                             <td>
+<<<<<<< HEAD
+                                                <input type="file" th:field="*{curriculumnModel.file}" name="" id="">
+                                            </td>
+                                            <th>Remarks</th>
+                                            <td>
+                                                <input type="text" th:field="*{remarks}" name="" id="">
+=======
                                                 <input type="file" name="" id="">
                                             </td>
                                             <th>Remarks</th>
                                             <td>
                                                 <input type="text" name="" id="">
+>>>>>>> main
                                             </td>
                                         </tr>
                                     </table>
@@ -247,7 +337,11 @@
                                     <span>Budget<span>
                                 </div>
                                 <div class="section-content">
+<<<<<<< HEAD
+                                    <table class="content-table budget-table">
+=======
                                     <table class="content-table">
+>>>>>>> main
                                         <tr>
                                             <th colspan="3">Total</th>
                                             <td colspan="2">
@@ -260,7 +354,11 @@
                                         </tr>
                                         <tr>
                                             <th>
+<<<<<<< HEAD
+                                                <button type="button" class="content-table-add-btn add-budget-btn">
+=======
                                                 <button class="content-table-add-btn">
+>>>>>>> main
                                                     <i class="fa-solid fa-plus"></i>
                                                 </button>
                                             </th>
@@ -273,9 +371,15 @@
                                             <th>Sum</th>
                                             <th>Note</th>
                                         </tr>
+<<<<<<< HEAD
+                                        <tr class="content-item">
+                                            <td>
+                                                <button type="button" class="content-table-remove-btn remove-budget-btn" onclick="removeTableItem(this)">
+=======
                                         <tr>
                                             <td>
                                                 <button class="content-table-remove-btn">
+>>>>>>> main
                                                     <i class="fa-solid fa-trash-can"></i>
                                                 </button>
                                             </td>
@@ -318,7 +422,11 @@
                                     <table class="content-table">
                                         <tr>
                                             <th>
+<<<<<<< HEAD
+                                                <button type="button" class="content-table-add-btn add-audit-btn">
+=======
                                                 <button class="content-table-add-btn">
+>>>>>>> main
                                                     <i class="fa-solid fa-plus"></i>
                                                 </button>
                                             </th>
@@ -330,9 +438,15 @@
                                             <th>Deadline</th>
                                             <th>Note</th>
                                         </tr>
+<<<<<<< HEAD
+                                        <tr class="content-item">
+                                            <td>
+                                                <button type="button" class="content-table-remove-btn remove-audit-btn" onclick="removeTableItem(this)">
+=======
                                         <tr>
                                             <td>
                                                 <button class="content-table-remove-btn">
+>>>>>>> main
                                                     <i class="fa-solid fa-trash-can"></i>
                                                 </button>
                                             </td>
@@ -376,5 +490,10 @@
             <span>FOOTER</span>
         </footer>
     </div>
+<<<<<<< HEAD
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="../static/js/classManagement.js"></script> -->
+=======
+>>>>>>> main
 </body>
 </html>
