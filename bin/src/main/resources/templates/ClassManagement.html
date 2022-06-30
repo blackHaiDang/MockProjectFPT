@@ -7,11 +7,26 @@
     <title>Class Management</title>
     <script src="https://kit.fontawesome.com/eb5105679e.js" crossorigin="anonymous"></script>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     <link rel="stylesheet" th:href="@{/css/main.css}">
     <link rel="stylesheet" href="../static/css/main.css">
 =======
     <link rel="stylesheet" th:href="@{/main.css}">
 >>>>>>> main
+=======
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" href="../static/css/main.css">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" href="../static/css/main.css">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <link rel="stylesheet" href="../static/css/main.css">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 </head>
 <body>
     <div class="app">
@@ -20,10 +35,22 @@
         </header>
         <div class="app-content">
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
             <nav class="nav-bar">
 =======
             <nav>
 >>>>>>> main
+=======
+            <nav class="nav-bar">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+            <nav class="nav-bar">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+            <nav class="nav-bar">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                 <button class="collapse-btn">&lt&lt</button>
                 <p class="role-option-lable">Your role now is:</p>
                 <select value="" class="role-option">
@@ -37,7 +64,19 @@
                         <a href="#" class="nav-link">Candidate Management</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                         <a href="#" class="nav-link">Trainer Management</a>
+=======
+                        <a th:href="@{/showTrainerForm}" class="nav-link">Trainer Management</a>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                        <a th:href="@{/showTrainerForm}" class="nav-link">Trainer Management</a>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                        <a th:href="@{/showTrainerForm}" class="nav-link">Trainer Management</a>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Trainee Management</a>
@@ -56,20 +95,44 @@
                 </div>
                 <div class="content">
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                     <form class="classbatch-infor-form" th:action="@{/addClass}" th:object="${classBatchModel}" method="post">
 =======
                     <form th:action="@{/addClass}" th:object="${classBatchModel}" method="post">
 >>>>>>> main
+=======
+                    <form class="classbatch-infor-form" th:action="@{/addClass}" th:object="${classBatchModel}" method="post">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                    <form class="classbatch-infor-form" th:action="@{/addClass}" th:object="${classBatchModel}" method="post">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                    <form class="classbatch-infor-form" th:action="@{/addClass}" th:object="${classBatchModel}" method="post">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                         <ul class="nav-tab">
                             <li class="nav-item">
                                 <a href="#" class="nav-link">Information</a>
                             </li>
                             <li class="nav-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                 <a th:href="@{_trainee}" class="nav-link">Trainee</a>
 =======
                                 <a href="#" class="nav-link">Trainee</a>
 >>>>>>> main
+=======
+                                <a href="#" class="nav-link">Trainee</a>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                <a href="#" class="nav-link">Trainee</a>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                <a href="#" class="nav-link">Trainee</a>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                             </li>
                         </ul>
                         <div class="content-main">
@@ -126,6 +189,9 @@
                                             <th>Location</th>
                                             <td>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                                 <select th:field="*{locationModel.locationId}" name="" id="">
                                                 	<option value=""></option>                                    
                                                     <option th:each="location : ${locationModels}" th:value="${location.locationId}" th:text="${location.locationName}"></option>
@@ -134,6 +200,21 @@
                                                 	<option value=""></option>                                    
                                                     <option th:each="location : ${locationModels}" th:value="${location.locationName}" th:text="${location.locationName}"></option>
 >>>>>>> main
+=======
+                                                <select th:field="*{locationModel.locationId}" name="" id="">
+                                                	<option value=""></option>                                    
+                                                    <option th:each="location : ${locationModels}" th:value="${location.locationId}" th:text="${location.locationName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{locationModel.locationId}" name="" id="">
+                                                	<option value=""></option>                                    
+                                                    <option th:each="location : ${locationModels}" th:value="${location.locationId}" th:text="${location.locationName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{locationModel.locationId}" name="" id="">
+                                                	<option value=""></option>                                    
+                                                    <option th:each="location : ${locationModels}" th:value="${location.locationId}" th:text="${location.locationName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                 </select>
                                             </td>
                                             <th>Detailed Location</th>
@@ -147,10 +228,22 @@
                                                 <select th:field="*{budgetCode}" name="" id="">
                                                 	<option value=""></option> 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                                     <option th:each="budget: ${budgetCodeEnums}" th:value="${budget}" th:text="${budget}"></option>
 =======
                                                     <option th:each="bud: ${budgetCodeEnums}" th:value="${bud}" th:text="${bud}"></option>
 >>>>>>> main
+=======
+                                                    <option th:each="budget: ${budgetCodeEnums}" th:value="${budget}" th:text="${budget}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                    <option th:each="budget: ${budgetCodeEnums}" th:value="${budget}" th:text="${budget}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                    <option th:each="budget: ${budgetCodeEnums}" th:value="${budget}" th:text="${budget}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                 </select>
                                             </td>
                                             <th>Estimated Budget</th>
@@ -162,6 +255,9 @@
                                             <th>Class Admin</th>
                                             <td>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                                 <select th:field="*{classAdminModel.classAdminId}" name="" id="">
                                                 	<option value="0"></option> 
                                                     <option th:each="classAdmin: ${classAdminModels}" th:value="${classAdmin.classAdminId}" th:text="${classAdmin.account}"></option>
@@ -170,6 +266,21 @@
                                                 	<option value=""></option> 
                                                     <option th:each="classAdmin: ${classAdmins}" th:value="${classAdmin.account}" th:text="${classAdmin.account}"></option>
 >>>>>>> main
+=======
+                                                <select th:field="*{classAdminModel.classAdminId}" name="" id="">
+                                                	<option value="0"></option> 
+                                                    <option th:each="classAdmin: ${classAdminModels}" th:value="${classAdmin.classAdminId}" th:text="${classAdmin.account}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{classAdminModel.classAdminId}" name="" id="">
+                                                	<option value="0"></option> 
+                                                    <option th:each="classAdmin: ${classAdminModels}" th:value="${classAdmin.classAdminId}" th:text="${classAdmin.account}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{classAdminModel.classAdminId}" name="" id="">
+                                                	<option value="0"></option> 
+                                                    <option th:each="classAdmin: ${classAdminModels}" th:value="${classAdmin.classAdminId}" th:text="${classAdmin.account}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                 </select>
                                             </td>
                                             <th>Weighted Number</th>
@@ -199,6 +310,9 @@
                                             <th>Subject Type</th>
                                             <td class="col-5">
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                                 <select th:field="*{subjectTypeModel.subjectTypeId}">
                                                 	<option value="0"></option>
                                                     <option th:each="subjectType: ${subjectTypeModels}" th:value="${subjectType.subjectTypeId}" th:text="${subjectType.subjectTypeName}"></option>
@@ -206,10 +320,28 @@
                                                 <select value="">
                                                     <option name="" id=""></option>
 >>>>>>> main
+=======
+                                                <select th:field="*{subjectTypeModel.subjectTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="subjectType: ${subjectTypeModels}" th:value="${subjectType.subjectTypeId}" th:text="${subjectType.subjectTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{subjectTypeModel.subjectTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="subjectType: ${subjectTypeModels}" th:value="${subjectType.subjectTypeId}" th:text="${subjectType.subjectTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{subjectTypeModel.subjectTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="subjectType: ${subjectTypeModels}" th:value="${subjectType.subjectTypeId}" th:text="${subjectType.subjectTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                 </select>
                                             </td>
                                             <th>Sub-Subject Type</th>
                                             <td class="col-5">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
                                                 <select th:field="*{subSubjectTypeModel.subSubjectTypeId}">
                                                 	<option value="0"></option>
@@ -218,10 +350,28 @@
                                                 <select value="">
                                                     <option name="" id=""></option>
 >>>>>>> main
+=======
+                                                <select th:field="*{subSubjectTypeModel.subSubjectTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="subSubjectType: ${subSubjectTypeModels}" th:value="${subSubjectType.subSubjectTypeId}" th:text="${subSubjectType.subSubjectTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{subSubjectTypeModel.subSubjectTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="subSubjectType: ${subSubjectTypeModels}" th:value="${subSubjectType.subSubjectTypeId}" th:text="${subSubjectType.subSubjectTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{subSubjectTypeModel.subSubjectTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="subSubjectType: ${subSubjectTypeModels}" th:value="${subSubjectType.subSubjectTypeId}" th:text="${subSubjectType.subSubjectTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                 </select>
                                             </td>
                                             <th>Delivery Type</th>
                                             <td class="col-5">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
                                                 <select th:field="*{deliveryTypeModel.deliveryTypeId}">
                                                 	<option value="0"></option>
@@ -230,12 +380,30 @@
                                                 <select value="">
                                                     <option name="" id=""></option>
 >>>>>>> main
+=======
+                                                <select th:field="*{deliveryTypeModel.deliveryTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="deliveryType: ${deliveryTypeModels}" th:value="${deliveryType.deliveryTypeId}" th:text="${deliveryType.deliveryTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{deliveryTypeModel.deliveryTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="deliveryType: ${deliveryTypeModels}" th:value="${deliveryType.deliveryTypeId}" th:text="${deliveryType.deliveryTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{deliveryTypeModel.deliveryTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="deliveryType: ${deliveryTypeModels}" th:value="${deliveryType.deliveryTypeId}" th:text="${deliveryType.deliveryTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                 </select>
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Format Type</th>
                                             <td>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
                                                 <select th:field="*{formatTypeModel.formatTypeId}">
                                                 	<option value="0"></option>
@@ -244,10 +412,28 @@
                                                 <select value="">
                                                     <option name="" id=""></option>
 >>>>>>> main
+=======
+                                                <select th:field="*{formatTypeModel.formatTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="formatType: ${formatTypeModels}" th:value="${formatType.formatTypeId}" th:text="${formatType.formatTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{formatTypeModel.formatTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="formatType: ${formatTypeModels}" th:value="${formatType.formatTypeId}" th:text="${formatType.formatTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{formatTypeModel.formatTypeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="formatType: ${formatTypeModels}" th:value="${formatType.formatTypeId}" th:text="${formatType.formatTypeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                 </select>
                                             </td>
                                             <th>Scope</th>
                                             <td>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
                                                 <select th:field="*{scopeModel.scopeId}">
                                                 	<option value="0"></option>
@@ -256,16 +442,46 @@
                                                 <select value="">
                                                     <option name="" id=""></option>
 >>>>>>> main
+=======
+                                                <select th:field="*{scopeModel.scopeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="scope: ${scopeModels}" th:value="${scope.scopeId}" th:text="${scope.scopeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{scopeModel.scopeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="scope: ${scopeModels}" th:value="${scope.scopeId}" th:text="${scope.scopeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{scopeModel.scopeId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="scope: ${scopeModels}" th:value="${scope.scopeId}" th:text="${scope.scopeName}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                 </select>
                                             </td>
                                             <th>Supplier / Partner</th>
                                             <td>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
                                             	<input type="text" hidden="true" th:field="*{supplierPartnerModel.supplierPartnerId}">
                                                 <input type="text" th:field="*{supplierPartnerModel.supplierPartnerName}">
 =======
                                                 <input type="text" name="" id="">
 >>>>>>> main
+=======
+                                            	<input type="text" hidden="true" th:field="*{supplierPartnerModel.supplierPartnerId}">
+                                                <input type="text" th:field="*{supplierPartnerModel.supplierPartnerName}">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                            	<input type="text" hidden="true" th:field="*{supplierPartnerModel.supplierPartnerId}">
+                                                <input type="text" th:field="*{supplierPartnerModel.supplierPartnerName}">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                            	<input type="text" hidden="true" th:field="*{supplierPartnerModel.supplierPartnerId}">
+                                                <input type="text" th:field="*{supplierPartnerModel.supplierPartnerName}">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                             </td>
                                         </tr>
                                     </table>
@@ -274,11 +490,23 @@
                                             <th class="col-4">Actual Start Date</th>
                                             <td class="col-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                 <input type="date" th:field="*{actualStartDate}">
                                             </td>
                                             <th class="col-4">Actual End Date</th>
                                             <td class="col-4">
                                                 <input type="date" th:field="*{actualEndDate}">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
                                                 <input type="date" name="" id="">
                                             </td>
@@ -286,11 +514,20 @@
                                             <td class="col-4">
                                                 <input type="date" name="" id="">
 >>>>>>> main
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                             </td>
                                         </tr>
                                         <tr>
                                             <th>Master Trainer</th>
                                             <td>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
                                                 <select>
                                                 	<option value="0"></option>
@@ -299,6 +536,21 @@
                                                 <select value="">
                                                     <option name="" id=""></option>
 >>>>>>> main
+=======
+                                                <select th:field="*{masterTrainerModel.trainerId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="trainer: ${trainerModels}" th:value="${trainer.trainerId}" th:text="${trainer.account}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{masterTrainerModel.trainerId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="trainer: ${trainerModels}" th:value="${trainer.trainerId}" th:text="${trainer.account}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <select th:field="*{masterTrainerModel.trainerId}">
+                                                	<option value="0"></option>
+                                                    <option th:each="trainer: ${trainerModels}" th:value="${trainer.trainerId}" th:text="${trainer.account}"></option>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                 </select>
                                             </td>
                                             <th>Trainer</th>
@@ -312,11 +564,23 @@
                                             <th>Curriculumn</th>
                                             <td>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                 <input type="file" th:field="*{curriculumnModel.file}" name="" id="">
                                             </td>
                                             <th>Remarks</th>
                                             <td>
                                                 <input type="text" th:field="*{remarks}" name="" id="">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
                                                 <input type="file" name="" id="">
                                             </td>
@@ -324,6 +588,12 @@
                                             <td>
                                                 <input type="text" name="" id="">
 >>>>>>> main
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                             </td>
                                         </tr>
                                     </table>
@@ -338,10 +608,22 @@
                                 </div>
                                 <div class="section-content">
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                     <table class="content-table budget-table">
 =======
                                     <table class="content-table">
 >>>>>>> main
+=======
+                                    <table class="content-table budget-table">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                    <table class="content-table budget-table">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                    <table class="content-table budget-table">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                         <tr>
                                             <th colspan="3">Total</th>
                                             <td colspan="2">
@@ -355,10 +637,22 @@
                                         <tr>
                                             <th>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                                 <button type="button" class="content-table-add-btn add-budget-btn">
 =======
                                                 <button class="content-table-add-btn">
 >>>>>>> main
+=======
+                                                <button type="button" class="content-table-add-btn add-budget-btn">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <button type="button" class="content-table-add-btn add-budget-btn">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <button type="button" class="content-table-add-btn add-budget-btn">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                     <i class="fa-solid fa-plus"></i>
                                                 </button>
                                             </th>
@@ -372,6 +666,9 @@
                                             <th>Note</th>
                                         </tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                         <tr class="content-item">
                                             <td>
                                                 <button type="button" class="content-table-remove-btn remove-budget-btn" onclick="removeTableItem(this)">
@@ -380,6 +677,21 @@
                                             <td>
                                                 <button class="content-table-remove-btn">
 >>>>>>> main
+=======
+                                        <tr class="content-item">
+                                            <td>
+                                                <button type="button" class="content-table-remove-btn remove-budget-btn" onclick="removeTableItem(this)">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                        <tr class="content-item">
+                                            <td>
+                                                <button type="button" class="content-table-remove-btn remove-budget-btn" onclick="removeTableItem(this)">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                        <tr class="content-item">
+                                            <td>
+                                                <button type="button" class="content-table-remove-btn remove-budget-btn" onclick="removeTableItem(this)">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                     <i class="fa-solid fa-trash-can"></i>
                                                 </button>
                                             </td>
@@ -423,10 +735,22 @@
                                         <tr>
                                             <th>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                                 <button type="button" class="content-table-add-btn add-audit-btn">
 =======
                                                 <button class="content-table-add-btn">
 >>>>>>> main
+=======
+                                                <button type="button" class="content-table-add-btn add-audit-btn">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <button type="button" class="content-table-add-btn add-audit-btn">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                                <button type="button" class="content-table-add-btn add-audit-btn">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                     <i class="fa-solid fa-plus"></i>
                                                 </button>
                                             </th>
@@ -439,6 +763,9 @@
                                             <th>Note</th>
                                         </tr>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
                                         <tr class="content-item">
                                             <td>
                                                 <button type="button" class="content-table-remove-btn remove-audit-btn" onclick="removeTableItem(this)">
@@ -447,6 +774,21 @@
                                             <td>
                                                 <button class="content-table-remove-btn">
 >>>>>>> main
+=======
+                                        <tr class="content-item">
+                                            <td>
+                                                <button type="button" class="content-table-remove-btn remove-audit-btn" onclick="removeTableItem(this)">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                        <tr class="content-item">
+                                            <td>
+                                                <button type="button" class="content-table-remove-btn remove-audit-btn" onclick="removeTableItem(this)">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+                                        <tr class="content-item">
+                                            <td>
+                                                <button type="button" class="content-table-remove-btn remove-audit-btn" onclick="removeTableItem(this)">
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
                                                     <i class="fa-solid fa-trash-can"></i>
                                                 </button>
                                             </td>
@@ -491,9 +833,24 @@
         </footer>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- <script src="../static/js/classManagement.js"></script> -->
 =======
 >>>>>>> main
+=======
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="../static/js/classManagement.js"></script> -->
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="../static/js/classManagement.js"></script> -->
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+=======
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="../static/js/classManagement.js"></script> -->
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 </body>
 </html>

@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Create Candidate</title>
+<title>Update Candidate</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
@@ -142,36 +142,46 @@
 						<div class="col-lg-1"></div>
 						<div class="col-lg-3 pagesettingfordiv">
 							<a class="pagesetting" style="color: black;"
-								th:href="createNewCandidate">Candidate Information</a>
+								th:href="@{/updateCandidate(traineeCandidateProfileId=*{updateProfile.traineeCandidateProfileId})}">Candidate
+								Information</a>
 						</div>
 						<div class="col-lg-1 pagesettingfordiv"
 							style="margin-left: -50px;">
-							<span style="color: black;" class="nontabsetting tablebackground">Result</span>
+							<a class="nontabsetting tablebackground" style="color: black;"
+								th:href="@{/updateCandidateResults(traineeCandidateProfileId=*{updateProfile.traineeCandidateProfileId})}">Result</a>
+
 						</div>
 					</div>
 					<div class="row tabsetting"
 						style="margin-left: 20px; padding: 20px; margin-top: 5px;">
 						<div class="col-lg-12 " style="font-weight: 550;">
-							<form th:action="@{/saveProfile}"
-								th:object="${traineeCandidateForm}"
-								enctype="multipart/form-data" method="POST">
+							<form
+								th:action="@{/saveUpdate(traineeCandidateProfileId=${updateProfile.traineeCandidateProfileId})}"
+								th:object="${profile}" enctype="multipart/form-data"
+								method="POST">
 								<div>
 									<div class="row tablesetting"
 										style="background-color: #95BCF2;">Personal Information</div>
 									<div class="row">
 										<div class="col-lg-2 tablesetting tablebackground">Empl
 											ID</div>
-										<div class="col-lg-2 tablesetting inputedbackground">.</div>
+										<div class="col-lg-2 tablesetting inputedbackground">
+											<span th:text="${updateProfile.traineeCandidateProfileId}"></span>
+										</div>
 										<div class="col-lg-2 tablesetting tablebackground">Type</div>
 										<div class="col-lg-2 tablesetting inputedbackground">
-											Candidate <input type="text" th:field="*{typeId}"
-												style="display: none;" />
+											<span th:text="${updateType.type}"></span> <input
+												type="hidden" th:value="${updateType.profileStatusId}"
+												name='profileStatusId' />
 										</div>
 
 										<div class="col-lg-2 tablesetting tablebackground">Status</div>
-										<div class="col-lg-2 tablesetting inputedbackground">New</div>
-										<input type="text" th:field="*{statusId}"
-											style="display: none;" />
+										<div class="col-lg-2 tablesetting inputedbackground">
+											<span th:text="${updateStatus.status}"></span> <input
+												type="hidden" th:value="${updateStatus.profileStatusId}"
+												name='profileStatusId' />
+										</div>
+
 									</div>
 
 
@@ -180,15 +190,16 @@
 										<div class="col-lg-2 tablesetting tablebackground">Application
 											Date</div>
 										<div>
-											<input class="col-lg-4 datesetting" type="date"
-												th:field="*{applicationDate}" />
+											<input class="col-lg-4 datesetting" type="datetime-local"
+												th:field="${updateCandidate.applicationDate}" />
 										</div>
 										<div class="col-lg-2 tablesetting tablebackground">Channel
 											*</div>
 										<div>
 											<select class="col-lg-4 selectsetting"
-												th:field="*{channelId}">
-												<option th:value="0">Select Channel</option>
+												th:field="${updateChannel.channelId}">
+												<option th:text="${updateChannel.channelName}"
+													th:value="${updateChannel.channelId}"></option>
 												<option th:each="channel:${channelList}"
 													th:value="${channel.channelId}"
 													th:text="${channel.channelName }"></option>
@@ -202,15 +213,18 @@
 										<div class="col-lg-2 tablesetting tablebackground">Site</div>
 										<div>
 											<select class="col-lg-4 selectsetting"
-												th:field="*{locationId}">
-												<option th:value="0">Select Site</option>
+												th:field="${updateLocation.locationId}">
+												<option th:text="${updateLocation.locationName}"
+													th:value="${updateLocation.locationId}"></option>
 												<option th:each="location:${locationList}"
 													th:value="${location.locationId }"
 													th:text="${location.locationName }"></option>
 											</select>
 										</div>
 										<div class="col-lg-2 tablesetting tablebackground">Account</div>
-										<div class="col-lg-4 tablesetting inputedbackground">.</div>
+										<div class="col-lg-4 tablesetting inputedbackground">
+											<span th:text="${updateAccount.account}"></span>
+										</div>
 									</div>
 
 
@@ -220,19 +234,19 @@
 											*</div>
 										<div>
 											<input class="col-lg-4 tablesetting" type="text"
-												th:field="*{fullName}" placeholder="Full Name" />
+												th:field="${updateProfile.fullName}" placeholder="Full Name" />
 										</div>
 										<div class="col-lg-2 tablesetting tablebackground">Gender*</div>
 										<div class="col-lg-2 radiosetting text-center"
 											style="border: 1px solid black; border-style: solid none solid solid;">
-											<input type="radio" th:field="*{gender}" th:value="Male">
-											<label th:text="Male"></label>
+											<input type="radio" th:field="${updateProfile.gender}"
+												th:value="Male"> <label th:text="Male"></label>
 
 										</div>
 										<div class="col-lg-2 radiosetting text-center"
 											style="border: 1px solid black; border-style: solid solid solid none;">
-											<input type="radio" th:field="*{gender}" th:value="Female">
-											<label th:text="Female"></label>
+											<input type="radio" th:field="${updateProfile.gender}"
+												th:value="Female"> <label th:text="Female"></label>
 										</div>
 									</div>
 
@@ -242,12 +256,14 @@
 										<div class="col-lg-2 tablesetting tablebackground">DOB *</div>
 										<div>
 											<input type="date" class="col-lg-4 datesetting"
-												th:field="*{dateOfBirth}" />
+												th:field="${updateProfile.dateOfBirth}" />
 										</div>
 										<div class="col-lg-2 tablesetting tablebackground">CV</div>
-										<div>
-											<input class="col-lg-4 datesetting " type="file" name="file"
-												accept="file/pdf, file/doc,file/docx" />
+										<div class="col-lg-4 tablesetting">
+											<input class="hidden" type="file" name="file" id="file"
+												accept="file/pdf, file/doc,file/docx" /><label for="file">Upload
+												New CV </label> <a th:href="@{/downloadCV(cvId=${updateCv.cvId})}"
+												th:text="${updateCv.name}"></a>
 										</div>
 									</div>
 
@@ -257,8 +273,9 @@
 										<div class="col-lg-2 tablesetting tablebackground">University</div>
 										<div>
 											<select class="col-lg-4 selectsetting"
-												th:field="*{universityId}">
-												<option th:value="0">Select University</option>
+												th:field="${updateUniversity.universityId}">
+												<option th:text="${updateUniversity.universityName}"
+													th:value="${updateUniversity.universityId}"></option>
 												<option th:each="university:${universityList}"
 													th:value="${university.universityId }"
 													th:text="${university.universityName }"></option>
@@ -267,8 +284,9 @@
 										<div class="col-lg-2 tablesetting tablebackground">Faculty</div>
 										<div>
 											<select class="col-lg-4 selectsetting"
-												th:field="*{facultyId}">
-												<option th:value="0">Select Faculty</option>
+												th:field="${updateFaculty.facultyId}">
+												<option th:text="${updateFaculty.facultyName}"
+													th:value="${updateFaculty.facultyId}"></option>
 												<option th:each="faculty:${facultyList}"
 													th:value="${faculty.facultyId }"
 													th:text="${faculty.facultyName }"></option>
@@ -283,13 +301,13 @@
 											*</div>
 										<div>
 											<input class="col-lg-4 tablesetting" type="text"
-												th:field="*{Phone}" placeholder="Phone Number" />
+												th:field="${updateProfile.phone}" placeholder="Phone Number" />
 										</div>
 										<div class="col-lg-2 tablesetting tablebackground">Email
 											*</div>
 										<div>
 											<input class="col-lg-4 tablesetting" type="email"
-												th:field="*{email}" placeholder="Email" />
+												th:field="${updateProfile.email}" placeholder="Email" />
 										</div>
 									</div>
 
@@ -298,8 +316,10 @@
 									<div class="row">
 										<div class="col-lg-2 tablesetting tablebackground">Skill</div>
 										<div>
-											<select class="col-lg-4 selectsetting" th:field="*{skillId}">
-												<option th:value="0">Select Skill</option>
+											<select class="col-lg-4 selectsetting"
+												th:field="${updateSkill.skillId}">
+												<option th:text="${updateSkill.skillName}"
+													th:value="${updateSkill.skillId}"></option>
 												<option th:each="skill:${skillList}"
 													th:value="${skill.skillId }" th:text="${skill.skillName }"></option>
 											</select>
@@ -307,8 +327,8 @@
 										<div class="col-lg-2 tablesetting tablebackground">Graduation
 											Year</div>
 										<div>
-											<input type="month" class="col-lg-4 datesetting"
-												th:field="*{graduationYear}" />
+											<input type="date" class="col-lg-4 datesetting"
+												th:field="${updateProfile.graduationYear}" />
 										</div>
 									</div>
 
@@ -319,12 +339,13 @@
 											Language</div>
 										<div>
 											<input class="col-lg-4 tablesetting" type="text"
-												th:field="*{foreignLanguage}" placeholder="Foreign Language" />
+												th:field="${updateProfile.foreignLanguage}"
+												placeholder="Foreign Language" />
 										</div>
 										<div class="col-lg-2 tablesetting tablebackground">Level</div>
 										<div>
 											<input class="col-lg-4 tablesetting" type="text"
-												th:field="*{level}" placeholder="Level" />
+												th:field="${updateProfile.level}" placeholder="Level" />
 										</div>
 									</div>
 
@@ -334,7 +355,7 @@
 										<div class="col-lg-2 tablesetting tablebackground">Note</div>
 										<div>
 											<input class="col-lg-10 tablesetting" type="text"
-												th:field="*{remarks}" />
+												th:field="${updateProfile.remarks}" />
 										</div>
 									</div>
 
