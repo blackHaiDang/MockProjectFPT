@@ -1,5 +1,6 @@
 package fa.mockproject.entity;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +16,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+<<<<<<< HEAD
 import javax.persistence.Lob;
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -75,6 +79,13 @@ public class ClassBatch {
 	private long estimatedBudget;
 	
 	@ManyToOne
+<<<<<<< HEAD
+=======
+	@JoinColumn(name = "subject_type_id", nullable = false)
+	private SubjectType subjectType;
+	
+	@ManyToOne
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	@JoinColumn(name = "sub_subject_type_id", nullable = false)
 	private SubSubjectType subSubjectType;
 	
@@ -89,9 +100,6 @@ public class ClassBatch {
 	@ManyToOne
 	@JoinColumn(name = "scope_id", nullable = false)
 	private Scope scope;
-	
-	@OneToOne(mappedBy = "classBatch", cascade = CascadeType.ALL)
-	private SupplierPartner supplierPartner;
 	
 	@Column(name = "actual_start_date", nullable = false)
 	private LocalDate actualStartDate;
@@ -111,9 +119,8 @@ public class ClassBatch {
 	@Column(name = "milestones", nullable = false)
 	private int milestones;
 	
-	@Lob
-	@Column(name = "curriculum", nullable = false)
-	private byte[] curriculum;
+	@OneToOne(mappedBy = "classBatch")
+	private Curriculumn curriculumn;
 	
 	@OneToMany(mappedBy = "classBatch", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
 	private List<Audit> audits;
@@ -121,10 +128,13 @@ public class ClassBatch {
 	@OneToMany(mappedBy = "classBatch", fetch = FetchType.LAZY)
 	private List<Trainee> trainees;
 	
+<<<<<<< HEAD
 	@ManyToOne
 	@JoinColumn(name = "subject_type_id", nullable = false)
 	private SubjectType subjectType;
 	
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	@Enumerated
 	@Column(name = "status", length = 255, nullable = false)
 	private ClassBatchStatusEnum status;
@@ -137,6 +147,9 @@ public class ClassBatch {
 	
 	@Column(name = "remarks", length = 255, nullable = true)
 	private String remarks;
+	
+	@OneToOne(mappedBy = "classBatch")
+	private SupplierPartner supplierPartner;
 
 	public ClassBatch() {
 		super();
@@ -148,7 +161,7 @@ public class ClassBatch {
 			SubSubjectType subSubjectType, DeliveryType deliveryType, FormatType formatType, Scope scope,
 			SupplierPartner supplierPartner, LocalDate actualStartDate, LocalDate actualEndDate,
 			int acceptedTraineeNumber, int actualTraineeNumber, List<Trainer> trainers, int milestones,
-			byte[] curriculum, List<Audit> audits, List<Trainee> trainees, SubjectType subjectType,
+			Curriculumn curriculumn, List<Audit> audits, List<Trainee> trainees, SubjectType subjectType,
 			ClassBatchStatusEnum status, String weightedNumber, String history, String remarks) {
 		super();
 		this.classId = classId;
@@ -174,7 +187,7 @@ public class ClassBatch {
 		this.actualTraineeNumber = actualTraineeNumber;
 		this.trainers = trainers;
 		this.milestones = milestones;
-		this.curriculum = curriculum;
+		this.curriculumn = curriculumn;
 		this.audits = audits;
 		this.trainees = trainees;
 		this.subjectType = subjectType;
@@ -184,7 +197,11 @@ public class ClassBatch {
 		this.remarks = remarks;
 	}
 
+<<<<<<< HEAD
 	public ClassBatch(ClassBatchModel classBatchModel) {
+=======
+	public ClassBatch(ClassBatchModel classBatchModel) throws IOException {
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		super();
 		this.classId = classBatchModel.getClassId();
         this.className = classBatchModel.getClassName();
@@ -211,11 +228,19 @@ public class ClassBatch {
         this.acceptedTraineeNumber = classBatchModel.getAcceptedTraineeNumber();
         this.actualTraineeNumber = classBatchModel.getActualTraineeNumber();
         this.trainers = new ArrayList<Trainer>();
+<<<<<<< HEAD
+=======
+        this.trainers.add(new Trainer(classBatchModel.getMasterTrainerModel(), this));
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
         classBatchModel.getTrainerModels().forEach(trainerModel -> {
         	this.trainers.add(new Trainer(trainerModel, this));
     	});
         this.milestones = classBatchModel.getMilestones();
+<<<<<<< HEAD
         this.curriculum = classBatchModel.getCurriculum();
+=======
+        this.curriculumn = new Curriculumn(classBatchModel.getCurriculumnModel(), this);
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
         this.audits = new ArrayList<Audit>();
         classBatchModel.getAuditModels().forEach(auditModel -> {
         	this.audits.add(new Audit(auditModel, this));
@@ -415,12 +440,12 @@ public class ClassBatch {
 		this.milestones = milestones;
 	}
 
-	public byte[] getCurriculum() {
-		return curriculum;
+	public Curriculumn getCurriculumn() {
+		return curriculumn;
 	}
 
-	public void setCurriculum(byte[] curriculum) {
-		this.curriculum = curriculum;
+	public void setCurriculumn(Curriculumn curriculumn) {
+		this.curriculumn = curriculumn;
 	}
 
 	public List<Audit> getAudits() {

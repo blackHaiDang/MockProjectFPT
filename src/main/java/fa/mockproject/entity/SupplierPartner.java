@@ -14,14 +14,14 @@ import fa.mockproject.model.SupplierPartnerModel;
 
 
 @Entity
-@Table(name = "Supplier/Partner")
+@Table(name = "SupplierPartner")
 @Cacheable
 public class SupplierPartner {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name= "supplier_partner_id")
-	private int supplierPartnerId;
+	private long supplierPartnerId;
 	
 	@Column(name = "supplier_partner_name", length = 255, nullable = false)
 	private String supplierPartnerName;
@@ -37,7 +37,7 @@ public class SupplierPartner {
 		super();
 	}
 
-	public SupplierPartner(int supplierPartnerId, String supplierPartnerName, ClassBatch classBatch, String remarks) {
+	public SupplierPartner(long supplierPartnerId, String supplierPartnerName, ClassBatch classBatch, String remarks) {
 		super();
 		this.supplierPartnerId = supplierPartnerId;
 		this.supplierPartnerName = supplierPartnerName;
@@ -60,11 +60,15 @@ public class SupplierPartner {
 		this.classBatch = classBatch;
 	}
 
+<<<<<<< HEAD
 	public int getSupplierPartnerId() {
+=======
+	public long getSupplierPartnerId() {
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		return supplierPartnerId;
 	}
 
-	public void setSupplierPartnerId(int supplierPartnerId) {
+	public void setSupplierPartnerId(long supplierPartnerId) {
 		this.supplierPartnerId = supplierPartnerId;
 	}
 

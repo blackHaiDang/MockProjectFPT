@@ -1,6 +1,6 @@
 package fa.mockproject.entity;
 
-import java.util.Set;
+import java.util.List;
 
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
@@ -30,10 +30,17 @@ public class Location {
 	private String remarks;
 
 	@OneToMany(mappedBy = "location")
+<<<<<<< HEAD
 	private Set<ClassBatch> classBatchs;
 
 	@OneToMany(mappedBy = "location")
 	private Set<Candidate> candidates;
+=======
+	private List<ClassBatch> classBatchs;
+
+	@OneToMany(mappedBy = "location")
+	private List<Candidate> candidates;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 	public Location() {
 		super();
@@ -86,6 +93,7 @@ public class Location {
 
 	
 
+<<<<<<< HEAD
 	public Set<ClassBatch> getClassBatchs() {
 		return classBatchs;
 	}
@@ -99,12 +107,27 @@ public class Location {
 	}
 
 	public void setCandidates(Set<Candidate> candidates) {
+=======
+	public List<ClassBatch> getClassBatchs() {
+		return classBatchs;
+	}
+
+	public void setClassBatchs(List<ClassBatch> classBatchs) {
+		this.classBatchs = classBatchs;
+	}
+
+	public List<Candidate> getCandidates() {
+		return candidates;
+	}
+
+	public void setCandidates(List<Candidate> candidates) {
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		this.candidates = candidates;
 	}
 
 	@Override
 	public String toString() {
-		return "Location [locationId=" + locationId + ", locationName=" + locationName + ", remarks=" + remarks + "]";
+		return locationName;
 	}
 
 }

@@ -25,6 +25,7 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
+<<<<<<< HEAD
 		
 		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-core -->
 <dependency>
@@ -34,10 +35,13 @@
 </dependency>
 		
 
+=======
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+<<<<<<< HEAD
 
 
 		<dependency>
@@ -50,6 +54,25 @@
 <!-- 			<artifactId>spring-boot-starter-security</artifactId> -->
 <!-- 		</dependency> -->
 
+=======
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-security</artifactId> -->
+		<!-- </dependency> -->
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -74,6 +97,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+<<<<<<< HEAD
 
 <!-- 		<dependency> -->
 <!-- 			<groupId>org.springframework.security</groupId> -->
@@ -92,6 +116,13 @@
 			<version>1.2</version>
 		</dependency>
 
+=======
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.security</groupId> -->
+		<!-- <artifactId>spring-security-test</artifactId> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		<dependency>
 			<groupId>commons-logging</groupId>
 			<artifactId>commons-logging</artifactId>
@@ -101,8 +132,13 @@
 <!--  	<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
+<<<<<<< HEAD
 			<version>1.18.24</version>	
 		</dependency>  -->
+=======
+			<scope>provided</scope>
+		</dependency>
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>

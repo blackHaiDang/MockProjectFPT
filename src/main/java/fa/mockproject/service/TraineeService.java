@@ -1,13 +1,9 @@
 package fa.mockproject.service;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.data.domain.Pageable;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import fa.mockproject.entity.Trainee;
 import fa.mockproject.model.TraineeModel;
+<<<<<<< HEAD
 import fa.mockproject.repository.TraineeCandidateProfileRepository;
 import fa.mockproject.repository.TraineeRepository;
 
@@ -62,4 +58,25 @@ public class TraineeService {
 // 		traineeRepository.save(trainee);
 		
 		
+=======
+import fa.mockproject.model.TraineePage;
+
+
+
+public interface TraineeService {
+	
+
+	/*public List<TraineeModel> getTraineeModelList();*/
+
+
+	public TraineeModel getTraineeModel(long id);
+
+	public TraineePage getTraineeModels(Pageable pageable);
+
+
+// 	public void update(TraineeModel traineeModelForm);
+		
+		
+
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 }

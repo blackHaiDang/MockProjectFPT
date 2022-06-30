@@ -3,6 +3,8 @@ package fa.mockproject.entity;
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,19 +23,20 @@ public class Trainer {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "trainer_id")
 	private long trainerId;
-	
+
+	@Enumerated(EnumType.STRING)
 	@Column(name= "type", length = 255, nullable =  false)
 	private TrainerTypeEnum type;
 	
 	@ManyToOne
 	@JoinColumn(name = "trainer_profile_id")
 	private TrainerProfile trainerProfile;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "class_id")
 	private ClassBatch classBatch;
-	
-	@Column(name = "remarks", length = 255, nullable =  true)
+
+	@Column(name = "remarks", length = 255, nullable = true)
 	private String remarks;
 
 	public Trainer() {
@@ -57,7 +60,17 @@ public class Trainer {
 		this.classBatch = classBatch;
 		this.remarks = trainerModel.getRemarks();
 	}
+<<<<<<< HEAD
 
+=======
+	public Trainer(TrainerModel trainerModel) {
+		super();
+		this.trainerId = trainerModel.getTrainerId();
+		this.type = trainerModel.getType();
+		this.trainerProfile = new TrainerProfile(trainerModel);
+		this.remarks = trainerModel.getRemarks();
+	}
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	public long getTrainerId() {
 		return trainerId;
 	}
@@ -98,6 +111,7 @@ public class Trainer {
 		this.remarks = remarks;
 	}
 
+<<<<<<< HEAD
 	@Override
 	public String toString() {
 		return "Trainer [trainerId=" + trainerId + ", type=" + type + ", trainerProfile=" + trainerProfile
@@ -109,3 +123,6 @@ public class Trainer {
 		type = trainerModel.getType();
 	}
 }
+=======
+}
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

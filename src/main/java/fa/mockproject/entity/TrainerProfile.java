@@ -19,7 +19,7 @@ import fa.mockproject.model.TrainerModel;
 @Table(name = "TrainerProfile")
 @Cacheable
 public class TrainerProfile {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	@Column(name = "trainer_profile_id")
@@ -33,29 +33,29 @@ public class TrainerProfile {
 	
 	@Column(name = "full_name", length = 255, nullable = false)
 	private String fullName;
-	
+
 	@Column(name = "date_of_birth", nullable = false)
 	private LocalDate dateOfBirth;
-	
+
 	@Column(name = "gender", nullable = false)
 	private int gender;
-	
+
 	@Column(name = "unit", length = 255, nullable = false)
 	private String unit;
-	
-	@Column(name= "major", length = 255, nullable = false)
+
+	@Column(name = "major", length = 255, nullable = false)
 	private String major;
-	
+
 	@Column(name = "phone", length = 255, nullable = false)
 	private String phone;
-	
-	@Column(name= "email", length = 255, nullable = false)
+
+	@Column(name = "email", length = 255, nullable = false)
 	private String email;
 
 	@Column(name = "experience", nullable = false)
 	private int experience;
-	
-	@Column(name= "remarks", length = 255, nullable = false)
+
+	@Column(name = "remarks", length = 255, nullable = false)
 	private String remarks;
 
 	public TrainerProfile() {
@@ -77,6 +77,7 @@ public class TrainerProfile {
 		this.phone = phone;
 		this.email = email;
 		this.experience = experience;
+		this.account = account;
 		this.remarks = remarks;
 	}
 
@@ -190,5 +191,17 @@ public class TrainerProfile {
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
+<<<<<<< HEAD
 	
 }
+=======
+
+	@Override
+	public String toString() {
+		return "TrainerProfile [trainerProfileId=" + trainerProfileId + ", fullName=" + fullName + ", dateOfBirth="
+				+ dateOfBirth + ", gender=" + gender + ", unit=" + unit + ", major=" + major + ", phone=" + phone
+				+ ", email=" + email + ", experience=" + experience + ", remarks=" + remarks + "]";
+	}
+
+}
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

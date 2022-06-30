@@ -1,5 +1,6 @@
 package fa.mockproject.service.impl;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,6 +12,7 @@ import javax.persistence.EntityNotFoundException;
 import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.security.core.Authentication;
@@ -99,10 +101,19 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 	public ClassBatchModel addClass(ClassBatchModel classBatchModel) {
 		
 		classBatchModel.setStatus(ClassBatchStatusEnum.Draft);
+<<<<<<< HEAD
 		ClassBatch classBatch = new ClassBatch(classBatchModel);
 		
 		try {
 			classBatchRepository.save(classBatch);			
+=======
+		ClassBatch classBatch;
+		try {
+			classBatch = new ClassBatch(classBatchModel);
+			classBatchRepository.save(classBatch);			
+		} catch (IOException e1) {
+			e1.printStackTrace();
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 			return null;
@@ -113,15 +124,28 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public ClassBatchModel updateDraftClass(ClassBatchModel classBatchModel) {
+<<<<<<< HEAD
 		ClassBatch classBatch = new ClassBatch(classBatchModel);
 		
 		try {
 			classBatchRepository.save(classBatch);			
+=======
+		ClassBatch classBatch;
+		try {
+			classBatch = new ClassBatch(classBatchModel);
+			classBatchRepository.save(classBatch);			
+		} catch (IOException e1) {
+			e1.printStackTrace();
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 			return null;
 		}
+<<<<<<< HEAD
 		
+=======
+			
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		return classBatchModel;
 	}
 	
@@ -139,13 +163,13 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean StartClass(Long classBatchId) {
-		// TODO Auto-generated method stub
+		// Start an accepted Class
 		return false;
 	}
 
 	@Override
 	public boolean FinishClass(Long classBatchId) {
-		// TODO Auto-generated method stub
+		// Finish an in-progress Class
 		return false;
 	}
 
@@ -169,7 +193,7 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean CloseClass(Long classBatchId) {
-		// TODO Auto-generated method stub
+		// Close a finished Class
 		return false;
 	}
 
@@ -194,10 +218,14 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean DeclineClass(Long classBatchId) {
+<<<<<<< HEAD
 		ClassBatchStatusEnum status = ClassBatchStatusEnum.Planning;
 		if(status != null) {
 			classBatchRepository.delete(null);
 		}
+=======
+		// Decline an approved Class
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		return false;
 	}
 

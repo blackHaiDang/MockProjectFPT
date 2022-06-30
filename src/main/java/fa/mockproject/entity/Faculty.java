@@ -1,6 +1,10 @@
 package fa.mockproject.entity;
 
+<<<<<<< HEAD
 import java.util.Set;
+=======
+import java.util.List;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 import javax.persistence.Cacheable;
 import javax.persistence.Column;
@@ -28,14 +32,22 @@ public class Faculty {
 	private String remarks;
 
 	@OneToMany(mappedBy = "faculty")
+<<<<<<< HEAD
 	private Set<TraineeCandidateProfile> traineeCandidateProfile;
+=======
+	private List<TraineeCandidateProfile> traineeCandidateProfile;
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 	public Faculty() {
 		super();
 	}
 
 	public Faculty(String facultyId, String facultyName, String remarks,
+<<<<<<< HEAD
 			Set<TraineeCandidateProfile> traineeCandidateProfile) {
+=======
+			List<TraineeCandidateProfile> traineeCandidateProfile) {
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		super();
 		this.facultyId = facultyId;
 		this.facultyName = facultyName;
@@ -73,6 +85,7 @@ public class Faculty {
 		this.remarks = remarks;
 	}
 
+<<<<<<< HEAD
 	public Set<TraineeCandidateProfile> getTraineeCandidateProfile() {
 		return traineeCandidateProfile;
 	}
@@ -81,4 +94,19 @@ public class Faculty {
 		this.traineeCandidateProfile = traineeCandidateProfile;
 	}
 
+=======
+	public List<TraineeCandidateProfile> getTraineeCandidateProfile() {
+		return traineeCandidateProfile;
+	}
+
+	public void setTraineeCandidateProfile(List<TraineeCandidateProfile> traineeCandidateProfile) {
+		this.traineeCandidateProfile = traineeCandidateProfile;
+	}
+
+	@Override
+	public String toString() {
+		return facultyName;
+	}
+
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 }

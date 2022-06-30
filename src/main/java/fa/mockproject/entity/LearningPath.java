@@ -17,7 +17,11 @@ public class LearningPath {
     private Topic topic;
 
     @ManyToOne
+<<<<<<< HEAD
     @JoinColumn(name = "trainee_candidate id", nullable = false)
+=======
+    @JoinColumn(name = "trainee_candidate_id", nullable = false)
+>>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
     private Trainee trainee;
 
     public LearningPath() {
