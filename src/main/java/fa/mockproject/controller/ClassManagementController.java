@@ -1,44 +1,16 @@
 package fa.mockproject.controller;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import java.text.SimpleDateFormat;
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
-=======
-import org.springframework.web.bind.annotation.ResponseBody;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-import org.springframework.web.bind.annotation.ResponseBody;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-import org.springframework.web.bind.annotation.ResponseBody;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
-import fa.mockproject.entity.Trainee;
-import fa.mockproject.entity.TraineeCandidateProfile;
 import fa.mockproject.entity.enumtype.BudgetCodeEnum;
 import fa.mockproject.model.AuditModel;
 import fa.mockproject.model.BudgetModel;
@@ -50,46 +22,13 @@ import fa.mockproject.model.LocationModel;
 import fa.mockproject.model.ScopeModel;
 import fa.mockproject.model.SubSubjectTypeModel;
 import fa.mockproject.model.SubjectTypeModel;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fa.mockproject.model.TraineeCandidateProfileModel;
-import fa.mockproject.model.TraineeModel;
 import fa.mockproject.model.TrainerModel;
-import fa.mockproject.repository.TraineeRepository;
-import fa.mockproject.service.TraineeCandidateProfileService;
-import fa.mockproject.service.TraineeService;
-import fa.mockproject.service.impl.TraineeCandidateProfileServiceImpl;
-
-
-=======
-import fa.mockproject.model.TrainerModel;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-import fa.mockproject.model.TrainerModel;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-import fa.mockproject.model.TrainerModel;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 @Controller
 public class ClassManagementController {
 	
-	@Autowired
-	private TraineeCandidateProfileService traineecandidateservice;
-	
-	@GetMapping("/classManagement")
+	@GetMapping("/")
 	public String getClassList(Model model) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		List<LocationModel> locationModels = new ArrayList<LocationModel>();
 		locationModels.add(new LocationModel("CG", "Cau Giay", ""));
 		locationModels.add(new LocationModel("HL", "Hoa Lac", ""));
@@ -172,53 +111,9 @@ public class ClassManagementController {
 		model.addAttribute("scopeModels", scopeModels);
 		model.addAttribute("trainerModels", trainerModels);
 		model.addAttribute("classBatchModel", classBatchModel);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-//		ClassBatchModel classBatchModel = new ClassBatchModel();
-//		classBatchModel.setLocationModel(new LocationModel());
-//		classBatchModel.setBudgetCode(BudgetCodeEnum.CTC_Fresher_Allowance);
-//		classBatchModel.setClassAdminModel(new ClassAdminModel());
-//		
-//		BudgetCodeEnum[] budgetCodeEnums = BudgetCodeEnum.values();
-//		List<LocationModel> locationModels = new ArrayList<LocationModel>();
-//		locationModels.add(new LocationModel(0, "Ha Noi", ""));
-//		locationModels.add(new LocationModel(1, "Cau Giay", ""));
-//		locationModels.add(new LocationModel(2, "HCM", ""));
-//		locationModels.add(new LocationModel(3, "Da Nang", ""));
-//
-//		model.addAttribute("classBatchModel", classBatchModel);
-//		model.addAttribute("budgetCodeEnums", budgetCodeEnums);
-//		model.addAttribute("locationModels", locationModels);
-//		model.addAttribute("locationTest", locationModels.get(0));
-
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		
 		return "ClassManagement";
 	}
-	@Autowired
-	TraineeCandidateProfileServiceImpl service;
-	@RequestMapping("/_trainee")
-	public ModelAndView trainee() {
-        var mav = new ModelAndView();
- //    var trainee = new TraineeCandidateProfile(1, "DangNH39", "Nguyen Hai Dang", "good", "good", "male", "FPT", "xyz", "123", "abc@gmail.com", true, "abc", "past", "123", "oneyear");
-        
-        Date date = new Date();
-        
-        TraineeCandidateProfileModel trainee = new TraineeCandidateProfileModel(12345678, null, null, "Nguyễn Hải Đăng", null, date, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, null, null);
-
-        mav.setViewName("Trainee.html");
-
- //       mav.addObject("hello", "Hello World");
-        mav.addObject("obj", trainee);
-        return mav;
-    }  
 	
 	@PostMapping("/addClass")
 	@ResponseBody

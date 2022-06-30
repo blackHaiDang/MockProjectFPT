@@ -4,38 +4,14 @@ import fa.mockproject.entity.SupplierPartner;
 
 public class SupplierPartnerModel {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	private int supplierPartnerId;
-=======
 	private long supplierPartnerId;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-	private long supplierPartnerId;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-	private long supplierPartnerId;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	private String supplierPartnerName;
 	private String remarks;
 	
 	public SupplierPartnerModel() {
 		super();
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	public SupplierPartnerModel(int supplierPartnerId, String supplierPartnerName, String remarks) {
-=======
 	public SupplierPartnerModel(long supplierPartnerId, String supplierPartnerName, String remarks) {
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-	public SupplierPartnerModel(long supplierPartnerId, String supplierPartnerName, String remarks) {
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-	public SupplierPartnerModel(long supplierPartnerId, String supplierPartnerName, String remarks) {
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		super();
 		this.supplierPartnerId = supplierPartnerId;
 		this.supplierPartnerName = supplierPartnerName;
@@ -48,29 +24,10 @@ public class SupplierPartnerModel {
 		this.remarks = supplierPartner.getRemarks();
 	}
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	public int getSupplierPartnerId() {
-		return supplierPartnerId;
-	}
-	public void setSupplierPartnerId(int supplierPartnerId) {
-=======
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	public long getSupplierPartnerId() {
 		return supplierPartnerId;
 	}
 	public void setSupplierPartnerId(long supplierPartnerId) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		this.supplierPartnerId = supplierPartnerId;
 	}
 	public String getSupplierPartnerName() {

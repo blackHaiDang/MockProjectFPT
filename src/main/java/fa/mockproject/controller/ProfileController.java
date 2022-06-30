@@ -41,14 +41,6 @@ import fa.mockproject.entity.TraineeCandidateProfileType;
 import fa.mockproject.entity.University;
 import fa.mockproject.model.InterviewTestResultModel;
 import fa.mockproject.model.TraineeCandidateProfileModel;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fa.mockproject.service.impl.CVServiceImpl;
-import fa.mockproject.service.impl.CandidateServiceImpl;
-import fa.mockproject.service.impl.ChannelServiceImpl;
-import fa.mockproject.service.impl.FacultyServiceImpl;
-=======
 import fa.mockproject.service.impl.AccountServiceImpl;
 import fa.mockproject.service.impl.CVServiceImpl;
 import fa.mockproject.service.impl.CandidateServiceImpl;
@@ -56,25 +48,6 @@ import fa.mockproject.service.impl.ChannelServiceImpl;
 import fa.mockproject.service.impl.EntryTestServiceImpl;
 import fa.mockproject.service.impl.FacultyServiceImpl;
 import fa.mockproject.service.impl.InterviewServiceImpl;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-import fa.mockproject.service.impl.AccountServiceImpl;
-import fa.mockproject.service.impl.CVServiceImpl;
-import fa.mockproject.service.impl.CandidateServiceImpl;
-import fa.mockproject.service.impl.ChannelServiceImpl;
-import fa.mockproject.service.impl.EntryTestServiceImpl;
-import fa.mockproject.service.impl.FacultyServiceImpl;
-import fa.mockproject.service.impl.InterviewServiceImpl;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-import fa.mockproject.service.impl.AccountServiceImpl;
-import fa.mockproject.service.impl.CVServiceImpl;
-import fa.mockproject.service.impl.CandidateServiceImpl;
-import fa.mockproject.service.impl.ChannelServiceImpl;
-import fa.mockproject.service.impl.EntryTestServiceImpl;
-import fa.mockproject.service.impl.FacultyServiceImpl;
-import fa.mockproject.service.impl.InterviewServiceImpl;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 import fa.mockproject.service.impl.LocationServiceImpl;
 import fa.mockproject.service.impl.SkillServiceImpl;
 import fa.mockproject.service.impl.TraineeCandidateProfileServiceImpl;
@@ -107,36 +80,15 @@ public class ProfileController {
 	private CVServiceImpl cvService;
 
 	@Autowired
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	private EntryTestServiceImpl entryTestServiceImpl;
 
 	@Autowired
 	private InterviewServiceImpl interviewServiceImpl;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-	@Autowired
-	private AccountServiceImpl accountServiceImpl;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-
-	@Autowired
-	private AccountServiceImpl accountServiceImpl;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 	@Autowired
 	private AccountServiceImpl accountServiceImpl;
 
 	@Autowired
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	private TraineeCandidateProfileServiceImpl traineeCandidateProfileService;
 
 	@Autowired
@@ -144,17 +96,6 @@ public class ProfileController {
 
 	@Autowired
 	private TraineeCandidateProfileStatusServiceImpl traineeCandidateProfileStatusService;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	
-	
-	@RequestMapping("/createCandidate")
-=======
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 	@RequestMapping("/viewCandidate")
 	public String viewCandidate(Model model) {
@@ -201,13 +142,6 @@ public class ProfileController {
 	}
 
 	@RequestMapping("/createNewCandidate")
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	public String createCandidate(Model model) {
 		model.addAttribute("traineeCandidateForm", new TraineeCandidateProfileModel());
 		List<Channel> channelList = channelService.listAll();
@@ -411,17 +345,6 @@ public class ProfileController {
 		TraineeCandidateProfileStatus status = traineeCandidateProfileStatusService.findById(model.getStatusId());
 		TraineeCandidateProfileType type = traineeCandidateProfileTypeService.findById(model.getTypeId());
 		CV cv = new CV(model);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		TraineeCandidateProfile profile = new TraineeCandidateProfile(model, university, faculty, skill, cv,
-				type);
-		Candidate candidate = new Candidate(model, channel,location, profile, status);
-=======
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		Candidate candidate = new Candidate(model, channel, location, status);
 		TraineeCandidateProfile profile = new TraineeCandidateProfile(model, candidate, university, faculty, skill, cv,
 				type, account1);
@@ -429,13 +352,6 @@ public class ProfileController {
 		candidates.add(candidate);
 		status.setCandidate(candidates);
 		traineeCandidateProfileStatusService.save(status);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		cvService.save(cv);
 		candidateService.save(candidate);
 		profile.setCandidate(candidate);

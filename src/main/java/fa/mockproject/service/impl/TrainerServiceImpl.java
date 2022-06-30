@@ -2,16 +2,6 @@ package fa.mockproject.service.impl;
 
 import java.util.List;
 import java.util.Optional;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,21 +23,6 @@ public class TrainerServiceImpl implements TrainerService{
 
 	@Override
 	public void save(TrainerModel trainerModel) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-//		Trainer trainer = new Trainer(trainerModel);
-//		trainerRepository.save(trainer);
-	}
-
-	private Trainer Trainer(TrainerModel trainerModel) {
-		// TODO Auto-generated method stub
-		return null;
-=======
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		TrainerProfile trainerProfile = new TrainerProfile(trainerModel);
 		Trainer trainer = new Trainer(trainerModel);
 		trainerRepository.save(trainerProfile);
@@ -63,47 +38,12 @@ public class TrainerServiceImpl implements TrainerService{
 			throw new RuntimeException("Trainer not found for id"+trainerId);
 		}
 		return trainer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 	}
 
 	@Override
 	public void deleteTrainerProfileById(long id) {
 		this.trainerRepository.deleteById(id);
 		
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	}
-
-	@Override
-	public void deleteTrainerProfileById(long id) {
-		this.trainerRepository.deleteById(id);
-		
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-	}
-
-	@Override
-	public void deleteTrainerProfileById(long id) {
-		this.trainerRepository.deleteById(id);
-		
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-	}
-
-	@Override
-	public Trainer findByTrainerId(long trainerId) {
-		Optional<Trainer> optional = trainerRepository.findById(trainerId);
-		Trainer trainer = null;
-		if(optional.isPresent()) {
-			trainer = optional.get();
-		}else {
-			throw new RuntimeException("Trainer not found for id"+trainerId);
-		}
-		return trainer;
-	}
-
 
 }
-
-
-

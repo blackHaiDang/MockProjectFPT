@@ -191,10 +191,6 @@ public class TrainerProfile {
 	public void setRemarks(String remarks) {
 		this.remarks = remarks;
 	}
-<<<<<<< HEAD
-	
-}
-=======
 
 	@Override
 	public String toString() {
@@ -204,4 +200,3 @@ public class TrainerProfile {
 	}
 
 }
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c

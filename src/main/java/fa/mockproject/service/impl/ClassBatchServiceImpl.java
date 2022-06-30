@@ -2,29 +2,15 @@ package fa.mockproject.service.impl;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.List;
 import java.util.Map;
 
 import javax.persistence.EntityNotFoundException;
-import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-
-import org.springframework.stereotype.Service;
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 
 import fa.mockproject.entity.ClassBatch;
 import fa.mockproject.entity.enumtype.ClassBatchStatusEnum;
@@ -107,31 +93,12 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 	public ClassBatchModel addClass(ClassBatchModel classBatchModel) {
 		
 		classBatchModel.setStatus(ClassBatchStatusEnum.Draft);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		ClassBatch classBatch = new ClassBatch(classBatchModel);
-		
-		try {
-			classBatchRepository.save(classBatch);			
-=======
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		ClassBatch classBatch;
 		try {
 			classBatch = new ClassBatch(classBatchModel);
 			classBatchRepository.save(classBatch);			
 		} catch (IOException e1) {
 			e1.printStackTrace();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 			return null;
@@ -142,48 +109,17 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public ClassBatchModel updateDraftClass(ClassBatchModel classBatchModel) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		ClassBatch classBatch = new ClassBatch(classBatchModel);
-		
-		try {
-			classBatchRepository.save(classBatch);			
-=======
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		ClassBatch classBatch;
 		try {
 			classBatch = new ClassBatch(classBatchModel);
 			classBatchRepository.save(classBatch);			
 		} catch (IOException e1) {
 			e1.printStackTrace();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 			return null;
 		}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		
-=======
 			
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-			
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-			
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		return classBatchModel;
 	}
 	
@@ -201,13 +137,13 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean StartClass(Long classBatchId) {
-		// Start an accepted Class
+		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean FinishClass(Long classBatchId) {
-		// Finish an in-progress Class
+		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -231,47 +167,19 @@ public class ClassBatchServiceImpl implements ClassBatchService {
 
 	@Override
 	public boolean CloseClass(Long classBatchId) {
-		// Close a finished Class
+		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public ClassBatchModel AcceptClass(ClassBatchModel classBatchModel) {
-		ClassBatchStatusEnum planning = ClassBatchStatusEnum.Planning;
-		ClassBatchStatusEnum planned = ClassBatchStatusEnum.Planned;
-		LocalDateTime now = LocalDateTime.now();
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		String history = now + "- Approved by" + auth.getPrincipal();
-		String popup = "Are you sure to accept?";
-		String msg28 = " Accept successfully. ";
-		SimpleMailMessage message = new SimpleMailMessage();
-		
-		
-		if(planning != null) {	
-			classBatchRepository.save(planned);
-			JOptionPane.showMessageDialog(null, popup);
-		}
+		// TODO Auto-generated method stub
 		return classBatchModel;
 	}
 
 	@Override
 	public boolean DeclineClass(Long classBatchId) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		ClassBatchStatusEnum status = ClassBatchStatusEnum.Planning;
-		if(status != null) {
-			classBatchRepository.delete(null);
-		}
-=======
-		// Decline an approved Class
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-		// Decline an approved Class
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-		// Decline an approved Class
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
+		// TODO Auto-generated method stub
 		return false;
 	}
 

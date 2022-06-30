@@ -26,26 +26,7 @@ public class ClassBatchModel {
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate expectedEndDate;
 	private Integer plannedTraineeNumber;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	private BudgetCodeEnum budgetCode;
-	private List<BudgetModel> budgetModels;
 	private Long estimatedBudget;
-	private SubSubjectTypeModel subSubjectTypeModel;
-	private DeliveryTypeModel deliveryTypeModel;
-	private FormatTypeModel formatTypeModel;
-	private ScopeModel scopeModel;
-	private SupplierPartnerModel supplierPartnerModel;
-=======
-	private Long estimatedBudget;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-	private Long estimatedBudget;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-	private Long estimatedBudget;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate actualStartDate;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -77,25 +58,8 @@ public class ClassBatchModel {
 	public ClassBatchModel() {
 		super();
 	}
-	
+
 	public ClassBatchModel(long classId, String className, String classCode, LocalDate expectedStartDate,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-			LocalDate expectedEndDate, LocationModel locationModel, String detailLocation,
-			ClassAdminModel classAdminModel, Integer plannedTraineeNumber, BudgetCodeEnum budgetCode,
-			List<BudgetModel> budgetModels, Long estimatedBudget, SubSubjectTypeModel subSubjectTypeModel,
-			DeliveryTypeModel deliveryTypeModel, FormatTypeModel formatTypeModel, ScopeModel scopeModel,
-			SupplierPartnerModel supplierPartnerModel, LocalDate actualStartDate, LocalDate actualEndDate,
-			Integer acceptedTraineeNumber, Integer actualTraineeNumber, List<TrainerModel> trainerModels,
-			Integer milestones, byte[] curriculum, List<AuditModel> auditModels, List<TraineeModel> traineeModels,
-			SubjectTypeModel subjectTypeModel, String weightedNumber, String history, ClassBatchStatusEnum status,
-			String remarks) {
-=======
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 			LocalDate expectedEndDate, Integer plannedTraineeNumber, Long estimatedBudget, LocalDate actualStartDate,
 			LocalDate actualEndDate, Integer acceptedTraineeNumber, Integer actualTraineeNumber, Integer milestones,
 			String weightedNumber, String history, String detailLocation, BudgetCodeEnum budgetCode,
@@ -105,13 +69,6 @@ public class ClassBatchModel {
 			SupplierPartnerModel supplierPartnerModel, ClassAdminModel classAdminModel, List<BudgetModel> budgetModels,
 			TrainerModel masterTrainerModel, List<TrainerModel> trainerModels, List<AuditModel> auditModels,
 			List<TraineeModel> traineeModels, String remarks) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		super();
 		this.classId = classId;
 		this.className = className;
@@ -119,26 +76,7 @@ public class ClassBatchModel {
 		this.expectedStartDate = expectedStartDate;
 		this.expectedEndDate = expectedEndDate;
 		this.plannedTraineeNumber = plannedTraineeNumber;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		this.budgetCode = budgetCode;
-		this.budgetModels = budgetModels;
 		this.estimatedBudget = estimatedBudget;
-		this.subSubjectTypeModel = subSubjectTypeModel;
-		this.deliveryTypeModel = deliveryTypeModel;
-		this.formatTypeModel = formatTypeModel;
-		this.scopeModel = scopeModel;
-		this.supplierPartnerModel = supplierPartnerModel;
-=======
-		this.estimatedBudget = estimatedBudget;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-		this.estimatedBudget = estimatedBudget;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
-		this.estimatedBudget = estimatedBudget;
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		this.actualStartDate = actualStartDate;
 		this.actualEndDate = actualEndDate;
 		this.acceptedTraineeNumber = acceptedTraineeNumber;
@@ -166,16 +104,6 @@ public class ClassBatchModel {
 		this.remarks = remarks;
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	public ClassBatchModel(ClassBatch classBatch) {
 		super();
 		this.classId = classBatch.getClassId();
@@ -204,28 +132,12 @@ public class ClassBatchModel {
 		this.actualTraineeNumber = classBatch.getActualTraineeNumber();
 		this.trainerModels = new ArrayList<TrainerModel>();
 		classBatch.getTrainers().forEach(trainer -> {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-			this.trainerModels.add(new TrainerModel(trainer));
-=======
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 			if (trainer.getType() == TrainerTypeEnum.MasterTrainer) {
 				this.masterTrainerModel = new TrainerModel(trainer);
 			}
 			else {
 				this.trainerModels.add(new TrainerModel(trainer));				
 			}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		});
 		this.milestones = classBatch.getMilestones();
 		this.curriculumnModel = new CurriculumnModel(classBatch.getCurriculumn());
@@ -519,27 +431,6 @@ public class ClassBatchModel {
 
 	@Override
 	public String toString() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-		return "ClassBatchModel [classId=" + classId + ", className=" + className + ", classCode=" + classCode
-				+ ", expectedStartDate=" + expectedStartDate + ", expectedEndDate=" + expectedEndDate
-				+ ", locationModel=" + locationModel + ", detailLocation=" + detailLocation + ", classAdminModel="
-				+ classAdminModel + ", plannedTraineeNumber=" + plannedTraineeNumber + ", budgetCode=" + budgetCode
-				+ ", budgetModels=" + budgetModels + ", estimatedBudget=" + estimatedBudget + ", subSubjectTypeModel="
-				+ subSubjectTypeModel + ", deliveryTypeModel=" + deliveryTypeModel + ", formatTypeModel="
-				+ formatTypeModel + ", scopeModel=" + scopeModel + ", supplierPartnerModel=" + supplierPartnerModel
-				+ ", actualStartDate=" + actualStartDate + ", actualEndDate=" + actualEndDate
-				+ ", acceptedTraineeNumber=" + acceptedTraineeNumber + ", actualTraineeNumber=" + actualTraineeNumber
-				+ ", trainerModels=" + trainerModels + ", milestones=" + milestones + ", curriculum="
-				+ Arrays.toString(curriculum) + ", auditModels=" + auditModels + ", traineeModels=" + traineeModels
-				+ ", subjectTypeModel=" + subjectTypeModel + ", weightedNumber=" + weightedNumber + ", history="
-				+ history + ", status=" + status + ", remarks=" + remarks + "]";
-=======
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 		return "ClassBatchModel"
 				+ "classId: " + classId + "\n"
 				+ "className: " + className + "\n"
@@ -573,13 +464,6 @@ public class ClassBatchModel {
 				+ "auditModels: " + auditModels + "\n"
 				+ "traineeModels: " + traineeModels + "\n"
 				+ "remarks: " + remarks + "\n";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
-=======
->>>>>>> 69598419c24d8ad9df66a5e2c8a25e15cec0967c
 	}
 	
 }
