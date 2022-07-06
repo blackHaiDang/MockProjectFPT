@@ -1,11 +1,12 @@
 package fa.mockproject.service;
 
-import fa.mockproject.entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
+import fa.mockproject.entity.User;
 
+@Service
 public interface UserService {
     User addUser(User user);
     User findByUserId(long userId);

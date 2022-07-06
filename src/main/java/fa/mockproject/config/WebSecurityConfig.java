@@ -8,11 +8,12 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import fa.mockproject.entity.enumtype.RoleEnum;
 
 @Configuration
 @EnableWebSecurity
@@ -32,25 +33,26 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     http.authorizeRequests().antMatchers("/listUser", "/listRole")
         .access("hasRole('ROLE_SYSTEM_ADMIN')");
     http.csrf().disable().authorizeRequests().anyRequest().authenticated()
-        .and().formLogin().loginPage("/login").defaultSuccessUrl("/dashboard", true).permitAll()
+        .and().formLogin().loginPage("/login").defaultSuccessUrl("/LandingPage").permitAll()
         .and()
         .logout().deleteCookies("JSESSIONID").permitAll();
-
-    /*http.csrf().disable().authorizeRequests()*/
-    /*http.authorizeRequests().antMatchers(HttpMethod.GET, "/addUser").permitAll()
+  }
+/*
+    http.csrf().disable().authorizeRequests();
+    http.authorizeRequests().antMatchers(HttpMethod.GET, "/addUser").permitAll()
         .antMatchers(HttpMethod.GET, "/listUser").permitAll()
         .anyRequest().authenticated()
         .and().formLogin()
         .loginPage("/login")
-       *//* .defaultSuccessUrl("/home", true)
+        .defaultSuccessUrl("/", true)
         .failureUrl("/login?error=true")
         .usernameParameter("username")
-        .passwordParameter("password")*//*
+        .passwordParameter("password")
         .and().logout().logoutUrl("/perform_logout")
-        .deleteCookies("JSESSIONID").permitAll();*/
-    // http.authorizeRequests().antMatchers("/admin").access("hasRole(" + Role.ADMIN + ")");
+        .deleteCookies("JSESSIONID").permitAll();
+     http.authorizeRequests().antMatchers("/admin").access("hasRole(" + RoleEnum.ADMIN + ")");
   }
-
+*/
   @Bean
   public AuthenticationManager customAuthenticationManager() throws Exception {
     return authenticationManager();
@@ -61,10 +63,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     auth.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
   }
 
-  @Override
-  public void configure(WebSecurity web) throws Exception {
-    web
-        .ignoring()
-        .antMatchers("/resources/**", "/static/**");
-  }
+
 }
