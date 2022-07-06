@@ -3,9 +3,11 @@ package fa.mockproject.repository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import fa.mockproject.entity.Trainee;
 
+@Repository
 public interface TraineeRepository extends JpaRepository<Trainee, Long> {
 	
 	Trainee findByTraineeCandidateId(long id);
