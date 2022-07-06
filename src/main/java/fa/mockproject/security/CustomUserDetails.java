@@ -11,8 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.*;
 
-@Data
-@AllArgsConstructor
+
 public class CustomUserDetails implements UserDetails {
     /**
      *
@@ -68,4 +67,18 @@ public class CustomUserDetails implements UserDetails {
     public User getUser() {
         return user;
     }
+    @Override
+	public String toString() {
+		return "CustomUserDetails [user=" + user + ", getAuthorities()=" + getAuthorities() + ", getPassword()="
+				+ getPassword() + ", getUsername()=" + getUsername() + ", isAccountNonExpired()="
+				+ isAccountNonExpired() + ", isAccountNonLocked()=" + isAccountNonLocked()
+				+ ", isCredentialsNonExpired()=" + isCredentialsNonExpired() + ", isEnabled()=" + isEnabled()
+				+ ", getUser()=" + getUser() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
+
+	public CustomUserDetails(User user) {
+		super();
+		this.user = user;
+	}
 }
